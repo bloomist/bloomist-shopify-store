@@ -1,0 +1,8 @@
+production:
+  password: 49fff2cc892fa7b6e2e0073169900481
+  theme_id: "45461274742"
+  store: bloomist.myshopify.com
+development:
+  password: 4e87f510249312cff5aac693e177461a
+  theme_id: "45568229494"
+  store: bloomist.myshopify.com
