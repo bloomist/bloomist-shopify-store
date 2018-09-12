@@ -1,0 +1,1 @@
+Bloomist Shopify theme files

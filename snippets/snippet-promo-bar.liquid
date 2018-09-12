@@ -1,0 +1,18 @@
+{% if section.settings.header--promo-bar--show-on != 'none' %}
+  {% unless template != 'index' and section.settings.header--promo-bar--show-on == 'home' %}
+    <div
+      class="promo-bar"
+      style="display: none; {% if bg_color %}background-color: {{ bg_color }};{% endif %}"
+      data-alternative-color="{{ section.settings.announcement--alternative-color }}"
+    >
+      {% if section.settings.header--promo-bar--link.size > 0 %}
+        <a href="{{ section.settings.header--promo-bar--link }}">
+          <span class="text">{{ section.settings.header--promo-bar--text | escape }}</span>
+        </a>
+      {% else %}
+        <span class="text">{{ section.settings.header--promo-bar--text | escape }}</span>
+      {% endif %}
+      <button class="close">&#x2715;</button>
+    </div>
+  {% endunless %}
+{% endif %}
