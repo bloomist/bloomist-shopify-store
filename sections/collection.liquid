@@ -40,18 +40,18 @@
   </header>
 
   <div class="row">
-    <div class="columns">
-      <div class="divider"></div>
+    {% if collection.image %}
+    <div class="image--container">
+      <img src="{{ collection.image | img_url: 'large' }}" />
     </div>
-  </div>
-
-  <div class="row">
-    {% if collection.description.size > 0 %}
-    <article class="description columns">
-      {{ collection.description }}
-    </article>
     {% endif %}
-
+    {% comment %} Collection description
+      {% if collection.description.size > 0 %}
+      <article class="description columns">
+        {{ collection.description }}
+      </article>
+      {% endif %}
+    {% endcomment %}
     {% if shop.products_count == 0 %}
 
       {% include 'snippet-default-products' %}

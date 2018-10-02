@@ -2001,7 +2001,7 @@ input[type="text"]::-ms-clear {
 }
 
 .fw--breadcrumbs > * a:after {
-  content: " /";
+  content: " |";
 }
 
 .pagination--root {
@@ -3985,7 +3985,7 @@ body {
 }
 
 .breadcrumbs > *:before {
-  content: "/";
+  content: "|";
   color: #aaa;
   margin: 0 1em;
   position: relative;
@@ -4996,7 +4996,9 @@ label {
 }
 
 .main-content {
+  margin: 0 auto;
   padding-top: 30px;
+  max-width: 80vw;
 }
 
 .row {
@@ -6035,7 +6037,7 @@ body {
   color: #acaeac;
   background: none;
   border: 0;
-  padding-bottom: 35px;
+  padding-bottom: 15px;
   margin: 0 0 0 -13px;
 }
 
