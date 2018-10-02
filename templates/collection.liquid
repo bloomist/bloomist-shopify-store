@@ -1,1 +1,52 @@
-{% section 'collection' %}
+{% comment %} Translations {% endcomment %}
+{% assign read_more_t = 'home.featured_blog.read_more' | t %}
+{% assign title_t = 'home.featured_blog.title' | t %}
+
+{% comment %} Variables {% endcomment %}
+{% assign heading = section.settings.heading | escape %}
+{% assign blog = blogs[section.settings.blog] %}
+{% assign link = blog.url %}
+{% include 'framework--background-colors', bg_color: section.settings.background-color %}
+
+<div
+  class="collection"
+  data-section-id="{{ section.id }}"
+  data-js-class="Collection"
+  data-section-type="collection"
+>
+
+  {% section 'collection' %}
+
+  <div class="row">
+    <div class="columns">
+      {% section 'featured-blog' %}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="columns">
+      <div class="divider bottom-margin"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="columns">
+      {% section 'framework--newsletter' %}
+    </div>
+  </div>
+
+  <footer class="row">
+    <div class="left columns large-6">
+      {% comment %} Bottom breadcrumbs
+      {% if section.settings.collections-breadcrumbs-show %}
+        {% include 'snippet-breadcrumbs' %}
+      {% endif %}
+      {% endcomment %}
+    </div>
+    <div class="right columns large-6">
+      {% include 'snippet-pagination' %}
+    </div>
+
+  </footer>
+
+</div> <!-- .collection -->

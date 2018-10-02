@@ -24,13 +24,6 @@
                 <div class="text">{{ block.settings.text }}</div>
               {% endif %}
 
-              {% assign powered_check = powered_by_link | split: '>' %}
-              {% if powered_check[1] != ' </a' %}
-                <div class="powered-by">
-                  <a href="https://troopthemes.com">Theme by Troop</a> | {{ powered_by_link }}
-                </div>
-              {% endif %}
-
               {% unless shop.enabled_payment_types == empty %}
                 {% if block.settings.footer-payment-options-show %}
                   {% include 'framework--payment-icons' %}
@@ -75,12 +68,10 @@
             {% if block.settings.subscribe--show-social-icons == false %}
               {% assign show_social = false %}
             {% endif %}
-
+  
             {% if block.settings.subscribe--show-newsletter or show_social %}
               {% assign newsletter_title = 'layout.footer.newsletter_title' | t %}
-              {% if newsletter_title.size > 0 %}
-                <h2 class="title">{{ newsletter_title }}</h2>
-              {% endif %}
+              <h2 class="title">{{ newsletter_title }}</h2>
             {% endif %}
 
             <div class="content">

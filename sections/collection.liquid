@@ -3,13 +3,6 @@
 
 {% paginate collection.products by products_per_page %}
 
-<div
-  class="collection"
-  data-section-id="{{ section.id }}"
-  data-js-class="Collection"
-  data-section-type="collection"
->
-
   <header class="row">
     <div class="left columns large-6">
       {% if section.settings.collections-breadcrumbs-show %}
@@ -41,9 +34,7 @@
 
   <div class="row">
     {% if collection.image %}
-    <div class="image--container">
-      <img src="{{ collection.image | img_url: 'large' }}" />
-    </div>
+    <img src="{{ collection.image | img_url: 'large' }}" class="image--collection" />
     {% endif %}
     {% comment %} Collection description
       {% if collection.description.size > 0 %}
@@ -79,21 +70,6 @@
       <div class="divider bottom-margin"></div>
     </div>
   </div>
-
-
-  <footer class="row">
-    <div class="left columns large-6">
-      {% if section.settings.collections-breadcrumbs-show %}
-        {% include 'snippet-breadcrumbs' %}
-      {% endif %}
-    </div>
-    <div class="right columns large-6">
-      {% include 'snippet-pagination' %}
-    </div>
-
-  </footer>
-
-</div> <!-- .collection -->
 
 {% endpaginate %}
 

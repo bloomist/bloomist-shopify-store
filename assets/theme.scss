@@ -1666,6 +1666,9 @@ img {
 .image--container {
   max-width: 100%;
 }
+.image--collection {
+  width: 100%;
+}
 
 /* Off Canvas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -3049,6 +3052,14 @@ select {
   width: 100%;
   float: left;
 }
+.column:first-child,
+.columns:first-child {
+  padding-left: 0;
+}
+.column:last-child,
+.columns:last-child {
+  padding-right: 0;
+}
 
 @media only screen {
   .column,
@@ -3057,6 +3068,14 @@ select {
     padding-left: 1.25em;
     padding-right: 1.25em;
     float: left;
+  }
+  .column:first-child,
+  .columns:first-child {
+    padding-left: 0;
+  }
+  .column:last-child,
+  .columns:last-child {
+    padding-right: 0;
   }
   .small-1 {
     position: relative;
@@ -5792,7 +5811,7 @@ body {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 100%;
-  padding: 15px;
+  padding: 15px 0;
 }
 
 .product-grid--root[data-centered="true"] {
@@ -5803,7 +5822,7 @@ body {
 
 @media only screen and (max-width: 767px) {
   .product-grid--root {
-    padding: 5px;
+    padding: 5px 0;
   }
 }
 
@@ -5838,12 +5857,18 @@ body {
 .product--root {
   text-align: center;
   position: relative;
-  padding: 15px;
+  padding: 15px 0 15px 15px;
+}
+.product--root:first-child {
+  padding-left: 0;
 }
 
 @media only screen and (max-width: 767px) {
   .product--root {
-    padding: 5px;
+    padding: 5px 0 5px 5px;
+  }
+  .product--root:first-child {
+    padding-left: 0;
   }
 }
 
@@ -5998,7 +6023,6 @@ body {
 
 .product--details {
   text-align: center;
-  text-transform: uppercase;
   padding-top: 15px;
 }
 
@@ -8438,13 +8462,7 @@ input.newsletter--email {
 .featured-blog--root {
   margin: 0 auto;
   text-align: center;
-  padding: 70px 50px;
-}
-
-@media only screen and (max-width: 767px) {
-  .featured-blog--root {
-    padding: 30px 15px;
-  }
+  padding: 15px 0;
 }
 
 .featured-blog--header {
@@ -8474,7 +8492,10 @@ input.newsletter--email {
 
 .featured-blog--item {
   width: calc(100% / 3);
-  padding: 15px;
+  padding: 15px 0 15px 15px;
+}
+.featured-blog--item:first-child {
+  padding-left: 0;
 }
 
 @media only screen and (max-width: 767px) {
