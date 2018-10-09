@@ -65,9 +65,9 @@
       "back": "Back"
     },
     "footer": {
-      "newsletter_title": "Subscribe",
-      "newsletter_subtitle": "Sign up to our mailing list",
-      "newsletter_placeholder": "Your Email",
+      "newsletter_title": "",
+      "newsletter_subtitle": "Sign up for our mailing list",
+      "newsletter_placeholder": "Your email",
       "newsletter_button": "OK",
       "newsletter_email_blank": "Email field is blank"
     }
@@ -118,7 +118,7 @@
     },
     "newsletter": {
       "email_placeholder": "Your email",
-      "success": "Thanks for subscribing",
+      "success": "Thanks for subscribing!",
       "button": "Subscribe"
     }
   },
