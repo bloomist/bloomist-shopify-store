@@ -73,6 +73,9 @@
         <a href="{{ link }}">
           <div class="featured-collections--image">{{ image }}</div>
           <h3 class="featured-collections--title">{{ title }}</h3>
+          {% if block.settings.collection-link-title.size > 0 %}
+            <h4 class="collection--button">{{ block.settings.collection-link-title | escape }}</h4>
+          {% endif %}
         </a>
       </div>
     {% endfor %}
@@ -138,6 +141,12 @@
             "type": "collection",
             "id": "collection",
             "label": "Collection"
+          },
+          {
+            "type": "text",
+            "id": "collection-link-title",
+            "label": "Button label",
+            "default": "Link to collection"
           }
         ]
       }

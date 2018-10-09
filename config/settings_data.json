@@ -25,10 +25,10 @@
     "color-grid-sold-out": "#ffffff",
     "color-grid-sold-out-bg": "#9b9994",
     "color-tabs-accordions": "#d9d8d7",
-    "typography--logo": "montserrat_n4",
-    "typography--heading": "montserrat_n4",
+    "typography--logo": "montserrat_n3",
+    "typography--heading": "montserrat_n3",
     "typography--accent": "montserrat_n3",
-    "typography--text": "montserrat_n3",
+    "typography--text": "montserrat_n2",
     "hover-image-enabled": true,
     "brand-show": false,
     "search--show-in-header": true,
@@ -106,22 +106,22 @@
           "footer--about": {
             "type": "about",
             "settings": {
-              "about-title": "Store",
-              "text": "<p>© Your brand name here<p>",
+              "about-title": "",
+              "text": "<p>&copy; Bloomist, Inc.<\/p>",
               "footer-payment-options-show": true
             }
           },
           "footer--menu": {
             "type": "menu",
             "settings": {
-              "menu-title": "Info",
+              "menu-title": "",
               "menu": "footer"
             }
           },
           "1535631596733": {
             "type": "subscribe",
             "settings": {
-              "newsletter--heading": "<p>Sign up to our mailing list<\/p>",
+              "newsletter--heading": "<p>Sign up&nbsp;for our mailing list<\/p>",
               "subscribe--show-newsletter": true,
               "subscribe--show-social-icons": true
             }
@@ -162,8 +162,8 @@
         "type": "collection",
         "settings": {
           "collections-breadcrumbs-show": true,
-          "collections-tags-show": true,
-          "collections-products-per-row": "4",
+          "collections-tags-show": false,
+          "collections-products-per-row": "3",
           "mobile-items-per-row": "2"
         }
       },
@@ -234,6 +234,7 @@
       },
       "1519177136360": {
         "type": "framework--featured-grid",
+        "disabled": true,
         "blocks": {
           "1519177136360-0": {
             "type": "image",
@@ -314,7 +315,7 @@
         "type": "featured-blog",
         "settings": {
           "background-color": "none",
-          "heading": "Our journal",
+          "heading": "For the Curious You",
           "blog": "news"
         }
       },
@@ -322,8 +323,8 @@
         "type": "framework--featured-text",
         "settings": {
           "background-color": "none",
-          "heading": "Our mission",
-          "text": "<p>We inspire you to create a natural refuge at home and curate responsibly sourced, sustainable products that help you bring nature indoors.<\/p>"
+          "heading": "We inspire you to create a natural refuge at home and curate responsibly sourced, sustainable products that help you bring nature indoors.",
+          "text": ""
         }
       },
       "1530233365157": {
@@ -372,13 +373,15 @@
           "1536830033524-0": {
             "type": "collection",
             "settings": {
-              "collection": "tunesia"
+              "collection": "tunesia",
+              "collection-link-title": "Shop the collection"
             }
           },
           "1536830033524-1": {
             "type": "collection",
             "settings": {
-              "collection": "vases"
+              "collection": "vases",
+              "collection-link-title": "Shop the collection"
             }
           }
         },
@@ -389,7 +392,7 @@
         "settings": {
           "background-color": "none",
           "width": 2,
-          "mobile-width": "2",
+          "mobile-width": "1",
           "heading": ""
         }
       },
@@ -397,6 +400,22 @@
         "type": "pages",
         "settings": {
           "center-content--enabled": false
+        }
+      },
+      "featured-blog": {
+        "type": "featured-blog",
+        "settings": {
+          "background-color": "none",
+          "heading": "For the curious you",
+          "blog": "news"
+        }
+      },
+      "framework--newsletter": {
+        "type": "framework--newsletter",
+        "settings": {
+          "background-color": "none",
+          "heading": "Our newsletter",
+          "newsletter--subheading": "<p>Join our community of greenery fans, nature lovers, and design buffs; and get 20% off your next order<\/p>"
         }
       }
     },

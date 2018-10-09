@@ -7980,13 +7980,7 @@ a.featured-grid--call-to-action:hover {
 
 .featured-collections--root {
   text-align: center;
-  padding: 70px 0;
-}
-
-@media only screen and (max-width: 767px) {
-  .featured-collections--root {
-    padding: 30px 0 15px;
-  }
+  padding: 30px 0;
 }
 
 .featured-collections--header {
@@ -8030,7 +8024,7 @@ a.featured-grid--call-to-action:hover {
   -ms-flex-align: center;
   align-items: center;
   max-width: 1200px;
-  padding: 15px;
+  padding: 0 15px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -8044,7 +8038,8 @@ a.featured-grid--call-to-action:hover {
 
 .featured-collections--item {
   text-align: center;
-  padding: 15px;
+  padding: 0 15px;
+  position: relative;
 }
 
 @media only screen and (max-width: 767px) {
@@ -8078,9 +8073,25 @@ a.featured-grid--call-to-action:hover {
   margin: -.3em 0;
 }
 
+.featured-collections--title,
+.collection--button {
+  color: {{ settings.color--alternative }};
+  text-shadow: 0 0 0.25rem {{ settings.color-text }};
+  text-transform: uppercase;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
 .featured-collections--title {
-  font-size: 14px !important;
-  margin: 0;
+  font-size: 3.5rem !important;
+  top: 50%;
+}
+.collection--button {
+  border-bottom: 1px solid {{ settings.color--alternative }};
+  bottom: 15%;
 }
 
 .map--root {
@@ -8341,7 +8352,7 @@ input.newsletter--email {
 }
 
 .featured-text--root {
-  padding: 70px 50px;
+  padding: 30px 50px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -8356,22 +8367,12 @@ input.newsletter--email {
   text-align: center;
 }
 
-.featured-text--heading {
-  padding-bottom: 15px;
-}
-
-@media only screen and (max-width: 767px) {
-  .featured-text--heading {
-    padding-bottom: 15px;
-  }
-}
-
 .featured-text--body p:last-child {
   margin-bottom: 0;
 }
 
 .featured-text--heading {
-  text-transform: uppercase;
+  text-transform: none;
   margin: -.3em 0;
 }
 
@@ -8384,9 +8385,10 @@ input.newsletter--email {
 }
 
 .featured-blog--root {
+  border-top: 1px solid {{ settings.color-border }};
   margin: 0 auto;
   text-align: center;
-  padding: 70px 50px;
+  padding: 30px 50px;
 }
 
 @media only screen and (max-width: 767px) {
