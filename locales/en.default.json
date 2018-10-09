@@ -39,7 +39,7 @@
     "password": {
       "title": "OPENING SOON",
       "sub_title": "Be an early bloomer! Find out about our launch before anyone else.",
-      "login_link": "Login",
+      "login_link": "Log In",
       "login_title": "Enter store using password:",
       "login_placeholder": "password",
       "login_button": "enter",
@@ -59,7 +59,7 @@
       "account_login_link": "Log in",
       "account_signup_link": "Sign up",
       "account_signed_in_html": "{{ view_account_link }} or {{ logout_link }}",
-      "account_view_link": "View account",
+      "account_view_link": "Log In",
       "account_logout_link": "Log out",
       "cart": "Basket",
       "back": "Back"
@@ -284,7 +284,7 @@
       "delete": "Delete"
     },
     "login": {
-      "page_title": "Login",
+      "page_title": "Log In",
       "email": "Email",
       "password": "Password",
       "forgot_password": "Forgot your password?",
@@ -332,7 +332,7 @@
       "email": "Email",
       "password": "Password",
       "submit": "Create",
-      "login": "Login to an Existing Account"
+      "login": "Log in to an Existing Account"
     },
     "reset_password": {
       "page_title": "Reset Password",
@@ -379,6 +379,9 @@
         "unsubscribe": {
           "description": "You won’t receive any more basket reminders from us."
         }
+      },
+      "payment": {
+        "amazon_payments_login_hint": "You will be asked to log in with Amazon."
       }
     },
     "notices": {
