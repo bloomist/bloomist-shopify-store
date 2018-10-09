@@ -89,7 +89,7 @@
 
       <div class="header--mobile--cart">
         <a class="header--mobile--cart-link font--accent" href="/cart">
-          {{ 'layout.header.cart' | t }}
+          {% comment %}{{ 'layout.header.cart' | t }}{% endcomment %}
           <span class="number-wrapper {% if cart.item_count == 0 %}hide{% endif %}">
             (<span class="number">{{ cart.item_count }}</span>)
           </span>
