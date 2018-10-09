@@ -7,13 +7,13 @@
 
   {% if settings.search--show-in-header %}
     <a class="searchbar-open" href="/search">{{ 'layout.header.search_toggle_link' | t }}
-      {% include 'snippet-symbol' with 'search' %}
+      {% comment %}{% include 'snippet-symbol' with 'search' %}{% endcomment %}
     </a>
   {% endif %}
 
   {% if section.settings.header-account-show and shop.customer_accounts_enabled %}
     <a class="account-open" href="#">{{ 'layout.header.account_toggle_link' | t }}
-      {% include 'snippet-symbol' with 'account' %}
+      {% comment %}{% include 'snippet-symbol' with 'account' %}{% endcomment %}
     </a>
   {% endif %}
 

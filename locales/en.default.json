@@ -25,7 +25,7 @@
       "products": "Products",
       "results_for": "results for",
       "search": "Search",
-      "placeholder": "Search store",
+      "placeholder": "Search Bloomist",
       "search_again": "Search again",
       "view_all": "View all"
     },
@@ -52,9 +52,9 @@
   "layout": {
     "header": {
       "currency": "",
-      "search_toggle_link": "",
+      "search_toggle_link": "Search",
       "search_placeholder": "Search store...",
-      "account_toggle_link": "",
+      "account_toggle_link": "My Account",
       "account_signed_out_html": "{{ login_link }} or {{ signup_link }}",
       "account_login_link": "Log in",
       "account_signup_link": "Sign up",
