@@ -143,7 +143,6 @@
           "product-modal-enabled": true,
           "product-zoom-enabled": true,
           "low-in-stock-amount": 3,
-          "cart-form-position": "left",
           "product-size-chart-enabled": false,
           "product-size-chart-option": "size",
           "product-size-chart-page-content": "",
@@ -151,9 +150,9 @@
           "product-share-twitter": true,
           "product-share-facebook": true,
           "product-share-pinterest": true,
-          "product-share-tumblr": true,
-          "product-share-google": true,
-          "product-similar-products-show": true,
+          "product-share-tumblr": false,
+          "product-share-google": false,
+          "product-similar-products-show": false,
           "product-similar-products-amount": "3",
           "mobile-items-per-row": "2"
         }
@@ -164,7 +163,7 @@
           "collections-breadcrumbs-show": true,
           "collections-tags-show": false,
           "collections-products-per-row": "3",
-          "mobile-items-per-row": "2"
+          "mobile-items-per-row": "1"
         }
       },
       "blog": {
@@ -491,7 +490,6 @@
             "product-modal-enabled": true,
             "product-zoom-enabled": true,
             "low-in-stock-amount": 0,
-            "cart-form-position": "left",
             "product-size-chart-enabled": false,
             "product-size-chart-option": "size",
             "product-size-chart-page-content": "",
@@ -890,7 +888,6 @@
             "product-modal-enabled": true,
             "product-zoom-enabled": true,
             "low-in-stock-amount": 0,
-            "cart-form-position": "left",
             "product-size-chart-enabled": false,
             "product-size-chart-option": "size",
             "product-size-chart-page-content": "",
@@ -1294,7 +1291,6 @@
             "product-modal-enabled": true,
             "product-zoom-enabled": true,
             "low-in-stock-amount": 0,
-            "cart-form-position": "left",
             "product-size-chart-enabled": false,
             "product-size-chart-option": "size",
             "product-size-chart-page-content": "",
@@ -1693,7 +1689,6 @@
             "product-modal-enabled": true,
             "product-zoom-enabled": true,
             "low-in-stock-amount": 0,
-            "cart-form-position": "left",
             "product-size-chart-enabled": false,
             "product-size-chart-option": "size",
             "product-size-chart-page-content": "",

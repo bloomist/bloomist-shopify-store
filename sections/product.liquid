@@ -47,7 +47,6 @@
   data-product-modal-enabled="{{ section.settings.product-modal-enabled }}"
   data-size-chart-enabled="{{ section.settings.product-size-chart-enabled }}"
   data-size-chart-option="{{ section.settings.product-size-chart-option }}"
-  data-cart-form-position="{{ section.settings.cart-form-position }}"
   {% if section.settings.low-in-stock-amount > 0 %}
     data-product-low-in-stock-amount="{{ section.settings.low-in-stock-amount }}"
   {% endif %}
@@ -72,7 +71,6 @@
                 {% include 'snippet-symbol' with 'arrow-left' %} {{ 'products.previous_item' | t }}
               </a>
             {% endif %}
-            <div class="border-decoration show--large"></div>
           </div>
 
           <div class="next columns large-3 large-offset-6 small-6">
@@ -81,7 +79,6 @@
                 {% include 'snippet-symbol' with 'arrow-right' %}
               </a>
             {% endif %}
-            <div class="border-decoration show--large"></div>
           </div>
         {% endif %}
       {% endif %}
@@ -186,13 +183,6 @@
 
         {% include 'snippet-product-unavailable' %}
 
-        {% if product.images.size > 1 %}
-          <div class="product-page--thumbs" data-position="cart-form-column">
-            <div class="product-page--thumbs-container">
-              {{ thumbnail_images }}
-            </div>
-          </div>
-        {% endif %}
       </div>
 
 
@@ -202,6 +192,12 @@
           {{ product.description }}
         </div>
       </div>
+
+    {% if section.settings.product-share-this-show %}
+      <div class="social-share">
+        {% include 'snippet-product-share' with 'product-template' %}
+      </div>
+    {% endif %}
 
       {% if product.images.size > 0 %}
         <div class="product-page--images">
@@ -265,7 +261,7 @@
           </div>
 
           {% if product.images.size > 1 %}
-            <div class="product-page--thumbs" data-position="image-column">
+            <div class="product-page--thumbs">
               <div class="product-page--thumbs-container">
                 {{ thumbnail_images }}
               </div>
@@ -275,19 +271,13 @@
       {% endif %}
 
     </div>
+
     <!-- Yotpo widget -->
-    <div class="yotpo yotpo-main-widget" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" data-description="{{ product.description | escape }}"></div>
+    {% assign seo = product.metafields.global %}
+    <div class="yotpo yotpo-main-widget" data-product-id="{{ product.id }}" data-name="{{ seo.title_tag | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" data-description="{{ seo.description_tag | escape }}"></div>
   </article>
 
 </div> <!-- .product-page -->
-
-{% if section.settings.product-share-this-show %}
-  <section class="row social-share">
-    <div class="columns">
-      {% include 'snippet-product-share' with 'product-template' %}
-    </div>
-  </section>
-{% endif %}
 
 {% if section.settings.product-similar-products-show %}
   {% include 'snippet-related-products' %}
@@ -382,23 +372,6 @@
       "step": 1,
       "default": 0,
       "info": "Set to 0 to disable this feature. Updated for each variant."
-    },
-    {
-      "type": "header",
-      "content": "Positions"
-    },
-    {
-      "type": "paragraph",
-      "content": "Screens under 1280px wide will rearrange the columns automatically to prevent content from getting squished."
-    },
-    {
-      "id": "cart-form-position",
-      "label": "Cart form",
-      "type": "radio",
-      "options": [
-        { "value": "left", "label": "Left"},
-        { "value": "right", "label": "Right"}
-      ]
     },
     {
       "type": "header",
