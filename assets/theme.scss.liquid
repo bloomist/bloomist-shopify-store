@@ -8831,8 +8831,10 @@ html.no-cssgrid .template-product .border-decoration {
   color: {{ settings.color-text }};
 }
 
-.template-product .social-share .share-item:nth-child(2) {
-  padding-left: 0;
+@media only screen and (max-width: 767px) {
+  .template-product .social-share .share-item:nth-child(2) {
+    padding-left: 0;
+  }
 }
 
 .template-product .social-share .share-item span {
@@ -9132,17 +9134,9 @@ html.no-cssgrid .product-page--main-content {
 
 /*  4.5 - Page
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-.template-page .main-content .row {
-  max-width: 1000px;
-  margin: 0;
-}
 
-.template-page .main-content .row.full-width {
-  max-width: none;
-}
-
-.template-page .main-content .row.single-column {
-  max-width: 700px;
+.template-page .page-title {
+  display: none;
 }
 
 .template-page .main-content .row.center {

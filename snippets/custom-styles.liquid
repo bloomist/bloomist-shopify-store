@@ -68,4 +68,90 @@
   text-transform: uppercase;
 }
 
+.template-page .rte-content img {
+  margin: 0;
+}
+
+.template-page .grid-section {
+  display: grid;
+  margin-bottom: 1rem;
+  padding-top: 1.5rem;
+  grid-template-columns: minmax(100%, 100%);
+  grid-row-gap: 1rem;
+}
+.template-page .grid-header {
+  font-size: 1.5rem;
+  align-self: center;
+  margin: 0;
+}
+.template-page .grid-header.text-featured {
+  font-size: 1.25rem;
+  text-align: center;
+  text-transform: none;
+}
+.template-page .grid-content {
+  font-size: 1rem;
+}
+.template-page .grid-media {
+  grid-row: 2;
+}
+.template-page .grid-media img {
+  margin: 0;
+}
+.template-page .grid-section.media-right .grid-header {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+@media only screen and (min-width: 768px) {
+  .template-page .grid-section {
+    border-top: 1px solid {{ settings.color-text }};
+    margin-bottom: 3rem;
+    padding-top: 3rem;
+    grid-template-columns: 0.33fr 0.34fr 0.33fr;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 0;
+  }
+  .template-page .grid-section:first-of-type {
+    border-width: 0;
+  }
+  .template-page .grid-section.media-left--2cols .grid-header {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .template-page .grid-section.media-left--2cols .grid-content {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  .template-page .grid-section.media-left--2cols .grid-media {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+  }
+
+  .template-page .grid-section.media-right .grid-content {
+    grid-column-start: 1;
+    grid-row: 2;
+  }
+  .template-page .grid-section.media-right .grid-media {
+    grid-row: 1 / span 2;
+  }
+  .template-page .grid-section.media-right--1col .grid-header {
+    grid-column-end: span 2;
+  }
+  .template-page .grid-section.media-right--1col .grid-content {
+    grid-column-end: span 2;
+  }
+  .template-page .grid-section.media-right--1col .grid-media {
+    grid-column: 3;
+  }
+  .template-page .grid-section.media-right--2cols .grid-media {
+    grid-column: 2 / span 2;
+  }
+  .template-page .grid-header {
+    font-size: 2rem;
+  }
+  .template-page .grid-header.text-featured {
+    font-size: 1.75rem;
+  }
+}
+
 </style>
