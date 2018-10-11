@@ -13,7 +13,7 @@
      {% if collection.handle == 'all' %}
         {% assign collection_title = 'general.breadcrumbs.products' | t %}
      {% endif %}
-      <li><a href="/collections">{{ 'general.breadcrumbs.collections' | t }}</a></li>  <li>{% if current_tags %} {{ collection_title | link_to_remove_tag: current_tags.first }} {% else %} {{ collection_title }} {% endif %}</li> {% if current_tags %}  <li>{{ current_tags.first }}</li> {% endif %}
+      <li><a href="/collections">{{ 'general.breadcrumbs.collections' | t }}</a></li><li>{% if current_tags %}{{ collection_title | link_to_remove_tag: current_tags.first }}{% else %}{{ collection_title }}{% endif %}</li>{% if current_tags %}<li>{{ current_tags.first }}</li>{% endif %}
    {% elsif template contains "blog" %}
        <li>{{ blog.title }}</li>
    {% elsif template contains "page" %}

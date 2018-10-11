@@ -32,9 +32,18 @@
     </div>
   </header>
 
+  {% if collection.image %}
+    {% capture image %}
+      {%
+        include "framework--image",
+        image: collection.image
+      %}
+    {% endcapture %}
+  {% endif %}
+
   <div class="row">
     {% if collection.image %}
-    <img src="{{ collection.image | img_url: 'large' }}" class="image--collection" />
+      <div class="image--collection">{{ image }}</div>
     {% endif %}
     {% comment %} Collection description
       {% if collection.description.size > 0 %}
@@ -63,12 +72,6 @@
       </section>
 
     {% endif %}
-  </div>
-
-  <div class="row">
-    <div class="columns">
-      <div class="divider bottom-margin"></div>
-    </div>
   </div>
 
 {% endpaginate %}

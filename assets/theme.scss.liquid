@@ -1952,7 +1952,7 @@ input[type="text"]::-ms-clear {
 }
 
 .fw--breadcrumbs > * a:after {
-  content: " /";
+  content: " |";
 }
 
 .pagination--root {
@@ -3112,6 +3112,11 @@ select {
   }
 }
 
+.column:first-child,
+.columns:first-child {
+  padding-left: 0;
+}
+
 /* Styles for screens that are atleast 768px; */
 @media only screen and (min-width: 768px) {
   .large-1 {
@@ -3876,7 +3881,6 @@ body {
 /* Breadcrumbs */
 .breadcrumbs {
   display: block;
-  padding: 0.75em 1.16667em 0.75em;
   overflow: hidden;
   margin-left: 0;
   list-style: none;
@@ -3936,9 +3940,9 @@ body {
 }
 
 .breadcrumbs > *:before {
-  content: "/";
+  content: "|";
   color: #aaa;
-  margin: 0 1em;
+  margin: 0 0.75rem;
   position: relative;
   top: 1px;
 }
@@ -4956,11 +4960,12 @@ label {
 
 .row {
   max-width: none;
+  padding: 0 15px;
 }
 
 @media only screen and (min-width: 768px) {
   .row {
-    padding: 0 40px;
+    padding: 0 50px;
   }
 }
 
@@ -5744,19 +5749,13 @@ body {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 100%;
-  padding: 15px;
+  padding: 1rem 0 3rem;
 }
 
 .product-grid--root[data-centered="true"] {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-@media only screen and (max-width: 767px) {
-  .product-grid--root {
-    padding: 5px;
-  }
 }
 
 .product-grid--root[data-items-per-row="3"] > * {
@@ -5790,12 +5789,26 @@ body {
 .product--root {
   text-align: center;
   position: relative;
-  padding: 15px;
+  padding: 0 0 1rem 1.5rem;
 }
 
 @media only screen and (max-width: 767px) {
   .product--root {
-    padding: 5px;
+    padding: 0 0 1rem 0.75rem;
+  }
+}
+
+.product--root:first-child {
+  padding-left: 0;
+}
+@media only screen and (max-width: 767px) {
+  .product--root:nth-child(3n) {
+    padding-left: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .product--root:nth-child(4n) {
+    padding-left: 0;
   }
 }
 
@@ -5950,12 +5963,11 @@ body {
 
 .product--details {
   text-align: center;
-  text-transform: uppercase;
-  padding-top: 15px;
+  padding-top: 1rem;
 }
 
 .product--title {
-  padding-bottom: 10px;
+  padding-bottom: 0.25rem;
 }
 
 .product--title a {
@@ -5971,7 +5983,7 @@ body {
 .product--price {
   color: {{ settings.color-text }};
   font-size: 12px;
-  margin-top: 15px;
+  margin-top: 1rem;
 }
 
 .product--compare-price {
@@ -5989,8 +6001,13 @@ body {
   color: {{ settings.color-text | color_lighten: 30 }};
   background: none;
   border: 0;
-  padding-bottom: 35px;
-  margin: 0 0 0 -13px;
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (min-width: 768px) {
+  .breadcrumbs {
+    padding-bottom: 1rem;
+  }
 }
 
 .breadcrumbs > * {
