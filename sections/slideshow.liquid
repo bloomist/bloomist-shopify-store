@@ -1,4 +1,4 @@
-<section class="slider {{ settings.color-icons-theme }}"
+<section class="root slider {{ settings.color-icons-theme }}"
          data-section-id="{{ section.id }}"
          data-autoplay="{{ section.settings.autoplay }}"
          data-rotate-frequency="{{ section.settings.rotate-frequency-range | times: 1000 }}"
@@ -23,7 +23,7 @@
           {%- assign slide_is_link = true -%}
         {% endif %}
 
-        <div class="slide{% if block.settings.slide-video.size > 0 %} video{% endif %}"
+        <div class="overlaid_container slide{% if block.settings.slide-video.size > 0 %} video{% endif %}"
              data-id="{{ block.id }}"
           {{ block.shopify_attributes }}>
 
@@ -42,12 +42,18 @@
               %}
             {% endif %}
           {% else %}
-            {%
-              include 'framework--image',
-              image: block.settings.image,
-              link: widget_image_link,
-              full_width: true
-            %}
+            {% unless block.settings.slide-link-url == "" %}
+            <a href="{{ block.settings.slide-link-url }}">
+            {% endunless %}
+              {%
+                include 'framework--image',
+                image: block.settings.image,
+                link: widget_image_link,
+                full_width: true
+              %}
+            {% unless block.settings.slide-link-url == "" %}
+            </a>
+            {% endunless %}
           {% endif %}
 
           {% if block.settings.slide-video.size > 0 %}
@@ -67,20 +73,20 @@
           {% if caption_exists %}
               <div class="caption {{ block.settings.slide-x-pos }} {{ block.settings.slide-y-pos }} {{ block.settings.slide-text-pos }}">
                 <div class="bg"></div>
+                <div class="overlaid_text center_horz_vert">
               {% if block.settings.slide-title.size > 0 %}
-                <h2 class="title">{{ block.settings.slide-title | escape }}</h2>
+                  <h2 class="title">{{ block.settings.slide-title | escape }}</h2>
               {% endif %}
 
               {% if block.settings.slide-tagline.size > 0 %}
-                <p class="sub-title">{{ block.settings.slide-tagline | escape }}</p>
+                <h3 class="sub-title">{{ block.settings.slide-tagline | escape }}</h3>
               {% endif %}
+                </div>
 
               {% if block.settings.slide-link-title.size > 0 %}
-                <div class="slideshow--button">
-                  <a class="button" href="{{ block.settings.slide-link-url }}">
-                    {{ block.settings.slide-link-title | escape }}
-                  </a>
-                </div>
+                <h4 class="slideshow--button overlaid_link center_horz">
+                  {{ block.settings.slide-link-title | escape }}
+                </h4>
               {% endif %}
             </div><!--.slide_caption -->
           {% endif %}

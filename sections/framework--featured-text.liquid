@@ -4,7 +4,7 @@
 
 {% comment %} View {% endcomment %}
 <div
-  class="featured-text--root"
+  class="root featured-text--root"
   data-section-id="{{ section.id }}"
   style="{% if bg_color %}background-color: {{ bg_color }};{% endif %}"
 >
@@ -14,9 +14,11 @@
         <h2 class="featured-text--heading">{{ heading }}</h2>
       </div>
     {% endif %}
+    {% unless section.settings.text == "" %}
     <div class="featured-text--body rte-content">
       {{ section.settings.text }}
     </div>
+    {% endunless %}
   </div>
 
 </div>

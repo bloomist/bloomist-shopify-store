@@ -7,7 +7,7 @@
 
 {% comment %} View {% endcomment %}
 <div
-  class="featured-collections--root"
+  class="root featured-collections--root"
   data-js-class="FrameworkFeaturedCollections"
   data-mobile-width="{{ section.settings.mobile-width }}"
   data-section-id="{{ section.id }}"
@@ -65,16 +65,18 @@
 
       {% comment %} View {% endcomment %}
       <div
-        class="featured-collections--item"
+        class="featured-collections--item overlaid_container"
         data-width="{{ block_width | floor }}"
         style="width: {{ block_width }}%;"
         {{ block.shopify_attributes }}
       >
         <a href="{{ link }}">
           <div class="featured-collections--image">{{ image }}</div>
-          <h3 class="featured-collections--title">{{ title }}</h3>
+          <h3 class="featured-collections--title overlaid_text center_horz_vert">{{ title }}</h3>
           {% if block.settings.collection-link-title.size > 0 %}
-            <h4 class="collection--button">{{ block.settings.collection-link-title | escape }}</h4>
+          <div class="rte-content">
+            <h4 class="collection--button overlaid_link center_horz">{{ block.settings.collection-link-title | escape }}</h4>
+          </div>
           {% endif %}
         </a>
       </div>

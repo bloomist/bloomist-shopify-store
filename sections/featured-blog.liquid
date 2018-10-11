@@ -10,7 +10,7 @@
 
 {% comment %} View {% endcomment %}
 <div
-  class="featured-blog--root"
+  class="root featured-blog--root divide_section"
   data-section-id="{{ section.id }}"
   data-js-class="FeaturedBlog"
   style="{% if bg_color %}background-color: {{ bg_color }};{% endif %}"
@@ -35,10 +35,10 @@
       {% endcapture %}
 
       {% for i in (1..3) %}
-        <div class="featured-blog--item">
+        <div class="featured-blog--item overlaid_container">
           <a href="{{ link }}">
             <div class="featured-blog--item--image">{{ image }}</div>
-            <h3 class="featured-blog--item--title">{{ title }}</h3>
+            <h3 class="featured-blog--item--title overlaid_text center_horz_vert">{{ title }}</h3>
           </a>
         </div>
       {% endfor %}
@@ -58,21 +58,19 @@
         {% endif %}
 
         {% comment %} View {% endcomment %}
-        <div class="featured-blog--item" {{ block.shopify_attributes }}>
+        <div class="featured-blog--item overlaid_container" {{ block.shopify_attributes }}>
           <a href="{{ link }}">
             {% if article.image %}
               <div class="featured-blog--item--image">{{ image }}</div>
             {% endif %}
-            <h3 class="featured-blog--item--title">{{ title }}</h3>
+            <h3 class="featured-blog--item--title overlaid_text center_horz_vert">{{ title }}</h3>
+            <div class="rte-content">
+              <h4 class="featured-blog--item--more overlaid_link center_horz" href="{{ link }}">{{ read_more_t }}</h4>
+            </div>
           </a>
 
           {% comment %}{{ article.excerpt_or_content | strip_html | truncatewords: 30 }}{% endcomment %}
 
-          {% comment %}
-          <div class="rte-content">
-            <a class="featured-blog--item--more" href="{{ link }}">{{ read_more_t }}</a>
-          </div>
-          {% endcomment %}
         </div>
       {% endfor %}
 

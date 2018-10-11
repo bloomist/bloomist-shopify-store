@@ -192,46 +192,6 @@
           "mailing-list--title": "<p>Sign up to our mailing list<\/p>"
         }
       },
-      "1519177052247": {
-        "type": "slideshow",
-        "blocks": {
-          "1519177052247-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/slide-poppie.jpg",
-              "slide-title": "October Issue: #poppie",
-              "slide-tagline": "One of the best options for highlighting the changing from summer to fall",
-              "slide-link-url": "",
-              "slide-link-title": "Read now",
-              "slide-y-pos": "middle",
-              "slide-x-pos": "right",
-              "slide-text-pos": "text-left"
-            }
-          },
-          "1519177052247-1": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/light.jpg",
-              "slide-title": "Nature's gifts",
-              "slide-tagline": "Celebrate special occasions with the perfect gift",
-              "slide-link-url": "",
-              "slide-link-title": "Shop now",
-              "slide-y-pos": "top",
-              "slide-x-pos": "left",
-              "slide-text-pos": "text-left"
-            }
-          }
-        },
-        "block_order": [
-          "1519177052247-0",
-          "1519177052247-1"
-        ],
-        "settings": {
-          "autoplay": false,
-          "transition_style": "default",
-          "rotate-frequency-range": 7
-        }
-      },
       "1519177136360": {
         "type": "framework--featured-grid",
         "disabled": true,
@@ -303,14 +263,6 @@
           "link-text": ""
         }
       },
-      "1519177316120": {
-        "type": "framework--newsletter",
-        "settings": {
-          "background-color": "none",
-          "heading": "Our newsletter",
-          "newsletter--subheading": "<p>Join our community of greenery fans, nature lovers, and design buffs; and get 20% off your&nbsp;next order<\/p>"
-        }
-      },
       "1521155885984": {
         "type": "featured-blog",
         "settings": {
@@ -347,19 +299,33 @@
           "1536829699724-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/hero.jpg",
+              "image": "shopify:\/\/shop_images\/185419.jpg",
               "slide-title": "Headline to come",
-              "slide-tagline": "Scroll",
+              "slide-tagline": "Text to come",
               "slide-link-url": "shopify:\/\/collections",
               "slide-link-title": "Shop now",
               "slide-y-pos": "middle",
               "slide-x-pos": "center",
               "slide-text-pos": "text-center"
             }
+          },
+          "1539215721864": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/247030.jpg",
+              "slide-title": "Slideshow",
+              "slide-tagline": "Introduce your store or campaign with this slideshow section.",
+              "slide-link-url": "",
+              "slide-link-title": "Link to content",
+              "slide-y-pos": "middle",
+              "slide-x-pos": "left",
+              "slide-text-pos": "text-left"
+            }
           }
         },
         "block_order": [
-          "1536829699724-0"
+          "1536829699724-0",
+          "1539215721864"
         ],
         "settings": {
           "autoplay": false,
@@ -424,10 +390,8 @@
       "1521155965634",
       "1536830033524",
       "1521155885984",
-      "1519177052247",
       "1519177136360",
-      "1530233365157",
-      "1519177316120"
+      "1530233365157"
     ]
   },
   "presets": {

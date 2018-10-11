@@ -1,7 +1,58 @@
 <style>
 
-/* Add Your Custom Styles Here */
+.root {
+  margin: 0 50px;
+  padding: 30px 0;
+}
+@media only screen and (max-width: 767px) {
+  .root {
+    margin: 0 15px;
+  }
+}
 
+.divide_section {
+  border-top: 1px solid {{ settings.color-border }};
+}
 
+.overlaid_container {
+  position: relative;
+}
+
+.overlaid_text, .overlaid_link {
+  color: {{ settings.color--alternative }};
+  text-shadow: 0 0 0.25rem {{ settings.color-text }};
+  text-transform: uppercase;
+  margin: auto;
+  position: absolute;
+}
+
+.overlaid_text {
+  width: 90%;
+}
+
+.overlaid_link {
+  border-bottom: 1px solid {{ settings.color--alternative }};
+  bottom: 15%;
+}
+@media only screen and (max-width: 767px) {
+  .overlaid_link {
+    display: none;
+  }
+}
+
+.center_horz {
+  left: 50%;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.center_horz_vert {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
 
 </style>
