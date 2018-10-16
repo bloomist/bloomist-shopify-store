@@ -108,7 +108,7 @@
             "settings": {
               "about-title": "",
               "text": "<p>&copy; Bloomist, Inc.<\/p>",
-              "footer-payment-options-show": true
+              "footer-payment-options-show": false
             }
           },
           "footer--menu": {
