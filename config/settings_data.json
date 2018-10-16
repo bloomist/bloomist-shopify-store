@@ -117,20 +117,11 @@
               "menu-title": "",
               "menu": "footer"
             }
-          },
-          "1535631596733": {
-            "type": "subscribe",
-            "settings": {
-              "newsletter--heading": "<p>Sign up&nbsp;for our mailing list<\/p>",
-              "subscribe--show-newsletter": true,
-              "subscribe--show-social-icons": true
-            }
           }
         },
         "block_order": [
           "footer--about",
-          "footer--menu",
-          "1535631596733"
+          "footer--menu"
         ],
         "settings": {}
       },
