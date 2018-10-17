@@ -160,7 +160,7 @@
       "blog": {
         "type": "blog",
         "settings": {
-          "articles-per-page": 10
+          "articles-per-page": 9
         }
       },
       "article": {
@@ -169,8 +169,8 @@
           "article-share-twitter": true,
           "article-share-facebook": true,
           "article-share-pinterest": true,
-          "article-share-tumblr": true,
-          "article-share-google": true
+          "article-share-tumblr": false,
+          "article-share-google": false
         }
       },
       "password": {

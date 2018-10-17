@@ -1,6 +1,6 @@
 {
   "date_formats": {
-    "month_day_year": "%B %d %Y"
+    "month_day_year": "%B %e, %Y"
   },
   "general": {
     "breadcrumbs": {
@@ -206,7 +206,7 @@
     "article": {
       "no_articles": "No articles found...",
       "date": "Date",
-      "written_by": "Written By",
+      "written_by": "Written by",
       "comment": "Comment",
       "comments": "Comments",
       "read_more": "Read more",
