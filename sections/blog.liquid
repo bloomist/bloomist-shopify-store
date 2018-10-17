@@ -6,37 +6,16 @@
   </div>
 </div>
 
-<div class="left-two-columns-wrapper row">
+<div class="row">
   <!-- Begin content -->
-  <div class="articles columns large-9">
+  <div class="articles columns large-12">
     {% if blog.articles.size <= 0 %}
       <h2>{{ 'blog.article.no_articles' | t }}</h2>
     {% endif %}
 
     {% for article in blog.articles %}
     <div class="article clearfix">
-      <div class="left-sidebar columns large-3 show--large">
-        <div class="date block">
-          <h3 class="title">{{ 'blog.article.date' | t }}</h3>
-          <p class="content">{{ article.published_at | date: format: 'month_day_year' }}</p>
-        </div>
-
-        <div class="author block">
-          <h3 class="title">{{ 'blog.article.written_by' | t }}</h3>
-          <p class="content">{{ article.author }}</p>
-        </div>
-
-        {% if article.comments_enabled? %}
-        <div class="comments block">
-            <h3 class="title">{{ 'blog.article.comments' | t }}</h3>
-            {% assign lang_comment = 'blog.article.comment' | t %}
-            {% assign lang_comments = 'blog.article.comments' | t %}
-            <p class="content">{{ article.comments_count }} {{ article.comments_count | pluralize: lang_comment, lang_comments }}</p>
-        </div>
-        {% endif %}
-      </div>
-
-      <div class="middle-column columns large-9">
+      <div class="columns large-12">
         <h1 class="title"><a href="{{ article.url }}">{{ article.title }}</a></h1>
         <p class="mobile-meta show--small-medium">
           {% assign published_date = article.published_at | date: format: 'month_day_year' %}
@@ -54,6 +33,16 @@
           </div>
         {% endif %}
 
+        <div class="date block">
+          <h3 class="title">{{ 'blog.article.date' | t }}</h3>
+          <p class="content">{{ article.published_at | date: format: 'month_day_year' }}</p>
+        </div>
+
+        <div class="author block">
+          <h3 class="title">{{ 'blog.article.written_by' | t }}</h3>
+          <p class="content">{{ article.author }}</p>
+        </div>
+
         <div class="content rte-content colored-links">
           {{ article.excerpt_or_content }}
 
@@ -70,14 +59,10 @@
     {% endfor %}
   </div>
 
-  <!-- Begin sidebar -->
-  {% include 'snippet-blog-sidebar' %}
-  <!-- End sidebar -->
-
 </div>
 <!-- End content -->
 <div class="row">
-  <div class="right columns large-6">
+  <div class="right columns large-12">
     {% include 'snippet-pagination' %}
   </div>
 </div>

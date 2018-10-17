@@ -82,6 +82,12 @@
         "default": "#444444"
       },
       {
+        "label": "Alternative text",
+        "type": "color",
+        "id": "color-header--alternative",
+        "default": "#444444"
+      },
+      {
         "label": "Cart link",
         "type": "color",
         "id": "color-header-cart",

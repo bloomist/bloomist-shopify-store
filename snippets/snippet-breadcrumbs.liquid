@@ -2,18 +2,13 @@
    <li><a href="/">{{ 'general.breadcrumbs.home' | t }}</a></li>
    {% if template contains "product" %}
       {% if collection %}            
-       <li><a href="/collections">{{ 'general.breadcrumbs.collections' | t }}</a></li>  <li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
-      {% else %}
-       <li><a href="/collections/all">{{ 'general.breadcrumbs.product' | t }}</a></li>
+       <li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
       {% endif %}
        <li>{{ product.title }}</li>
 
    {% elsif template contains "collection" %}
      {% assign collection_title = collection.title %}
-     {% if collection.handle == 'all' %}
-        {% assign collection_title = 'general.breadcrumbs.products' | t %}
-     {% endif %}
-      <li><a href="/collections">{{ 'general.breadcrumbs.collections' | t }}</a></li><li>{% if current_tags %}{{ collection_title | link_to_remove_tag: current_tags.first }}{% else %}{{ collection_title }}{% endif %}</li>{% if current_tags %}<li>{{ current_tags.first }}</li>{% endif %}
+      <li>{% if current_tags %}{{ collection_title | link_to_remove_tag: current_tags.first }}{% else %}{{ collection_title }}{% endif %}</li>{% if current_tags %}<li>{{ current_tags.first }}</li>{% endif %}
    {% elsif template contains "blog" %}
        <li>{{ blog.title }}</li>
    {% elsif template contains "page" %}

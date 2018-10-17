@@ -2173,7 +2173,7 @@ function(e,t){"object"==typeof exports?module.exports=t():"function"==typeof def
         paginationNumbers: _this.pagination_numbers,
         scrollPerPageNav: true,
         slideSpeed: 800,
-        autoHeight: false,
+        autoHeight: true,
         autoPlay: _this.autoplay(),
         afterInit: function() {},
         afterAction: function() {
