@@ -17,7 +17,7 @@
 {% assign title = product.title %}
 {% assign vendor = product.vendor %}
 {% assign vendor_url = product.vendor | url_for_vendor %}
-{% assign price = product.price | money %}
+{% assign price = product.price | money | remove: '.00' %}
 {% assign price_varies = product.price_varies %}
 
 {% if product.compare_at_price > product.price and product.available %}

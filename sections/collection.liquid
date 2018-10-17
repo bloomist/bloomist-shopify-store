@@ -43,15 +43,32 @@
 
   <div class="row">
     {% if collection.image %}
-      <div class="image--collection">{{ image }}</div>
+      <div class="container--collection-image overlaid_container">
     {% endif %}
-    {% comment %} Collection description
-      {% if collection.description.size > 0 %}
-      <article class="description columns">
-        {{ collection.description }}
-      </article>
+      {% if collection.image %}
+        <div class="image--collection">{{ image }}</div>
       {% endif %}
-    {% endcomment %}
+      {% unless collection.title == '' %}
+        <h3 class="collection--title{% if collection.image %} overlaid_text center_horz_vert{% endif %}">
+          {{ collection.title }}
+        </h3>
+      {% endunless %}
+    {% if collection.image %}
+      </div>
+    {% endif %}
+
+    {% if collection.description.size > 0 %}
+      <div class="root featured-text--root">
+        <div class="featured-text--container">
+          <div class="featured-text--header">
+            <h2 class="featured-text--heading">
+              {{ collection.description }}
+            </h2>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    
     {% if shop.products_count == 0 %}
 
       {% include 'snippet-default-products' %}

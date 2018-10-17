@@ -5762,52 +5762,46 @@ body {
   justify-content: center;
 }
 
-.product-grid--root[data-items-per-row="3"] > * {
-  width: calc(100% / 3);
-}
-
-.product-grid--root[data-items-per-row="3"] > * {
-  width: 33.3333%;
-}
-
-.product-grid--root[data-items-per-row="4"] > * {
-  width: calc(100% / 4);
-}
-
-.product-grid--root[data-items-per-row="6"] > * {
-  width: calc(100% / 6);
+.product--root {
+  margin: 0 0 2rem 1rem;
 }
 
 @media only screen and (max-width: 767px) {
   .product-grid--root[data-mobile-items-per-row="1"] > * {
     width: calc(100%);
   }
-}
-
-@media only screen and (max-width: 767px) {
-  .product-grid--root[data-mobile-items-per-row="2"] > * {
-    width: calc(100% / 2);
+  .product-grid--root[data-mobile-items-per-row="1"] > .product--root {
+    margin-left: 0;
   }
-}
 
-.product--root {
-  text-align: center;
-  position: relative;
-  padding: 0 0 1rem 2rem;
-}
-.product--root:first-child {
-  padding-left: 0;
-}
-
-@media only screen and (max-width: 767px) {
-  .product--root {
-    padding: 1rem 0;
+  .product-grid--root[data-mobile-items-per-row="2"] > * {
+    width: 47.24%;
+  }
+  .product-grid--root[data-mobile-items-per-row="2"] > .product--root:nth-child(2n+1) {
+    margin-left: 0;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .product--root:nth-child(4n) {
-    padding-left: 0;
+  .product--root {
+    position: relative;
+  }
+  .product--root:first-child {
+    margin-left: 0;
+  }
+
+  .product-grid--root[data-items-per-row="3"] > * {
+    width: 31.5%;
+  }
+  .product-grid--root[data-items-per-row="3"] > .product--root:nth-child(3n+1) {
+    margin-left: 0;
+  }
+
+  .product-grid--root[data-items-per-row="4"] > * {
+    width: 22.94%;
+  }
+  .product-grid--root[data-items-per-row="4"] > .product--root:nth-child(4n+1) {
+    margin-left: 0;
   }
 }
 
@@ -5962,11 +5956,12 @@ body {
 
 .product--details {
   text-align: center;
-  padding-top: 1rem;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
 }
 
 .product--title {
-  padding-bottom: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 
 .product--title a {
