@@ -1,12 +1,5 @@
 {% capture shareurl %}{{ shop.url }}{{ article.url }}{% endcapture %}
 
-{% if section.settings.article-share-twitter %}
-  <a class="share-item twitter" href="https://twitter.com/intent/tweet?text=Check%20out%20this%20{%if template contains "article" or template contains "blog"%}blog%20post{% elsif template contains "product" %}product{%endif%}:+{{ shareurl }}">
-    {% include 'snippet-symbol' with 'twitter' %}
-    <span>Tweet</span>
-  </a>
-{% endif %}
-
 {% if section.settings.article-share-facebook %}
   <a class="share-item facebook" href="http://www.facebook.com/sharer.php?u={{ shareurl }}&t={{ article.title }}">
     {% include 'snippet-symbol' with 'facebook' %}
@@ -21,6 +14,13 @@
       <span>Pin</span>
     </a>
   {% endif %}
+{% endif %}
+
+{% if section.settings.article-share-twitter %}
+  <a class="share-item twitter" href="https://twitter.com/intent/tweet?text=Check%20out%20this%20{%if template contains "article" or template contains "blog"%}blog%20post{% elsif template contains "product" %}product{%endif%}:+{{ shareurl }}">
+    {% include 'snippet-symbol' with 'twitter' %}
+    <span>Tweet</span>
+  </a>
 {% endif %}
 
 {% if section.settings.article-share-tumblr %}
