@@ -274,7 +274,15 @@
 
     <!-- Yotpo widget -->
     {% assign seo = product.metafields.global %}
-    <div class="yotpo yotpo-main-widget" data-product-id="{{ product.id }}" data-name="{{ seo.title_tag | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" data-description="{{ seo.description_tag | escape }}"></div>
+    {% assign yotpo_app_key = 'uWVZJaYKfbdMhDA6RjsHyZ6nq6BqgKCHKwW7s1YO' %}
+    {% capture yotpo_reviews_widget %}'<div class="yotpo yotpo-main-widget" data-product-id="{{ product.id }}" data-name="{{ seo.title_tag | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" | replace: "?", "%3F" | replace: "&", "%26"}}" data-description="{{ seo.description_tag | escape }}"></div>'{% endcapture %}
+    <script>
+      jQuery.getJSON('https://api.yotpo.com/products/{{ yotpo_app_key }}/{{ product.id }}/bottomline', function(obj) {
+        if (obj.response.bottomline.total_reviews > 0) {
+          $('.product-page--main-content').after({{ yotpo_reviews_widget }});
+        }
+      });
+    </script>
   </article>
 
 </div> <!-- .product-page -->
