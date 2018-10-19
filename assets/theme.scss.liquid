@@ -9318,6 +9318,36 @@ html.no-cssgrid .product-page--main-content {
   padding-top: 2rem;
 }
 
+@media only screen and (min-width: 768px) {
+  .template-blog .article .large-12 {
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-column-gap: 1.5rem;
+    margin-bottom: 2rem;    
+  }
+  .template-blog .article .title {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+  .template-blog .article .featured-image {
+    grid-column: 1;
+    grid-row: 2 / span 3;
+    margin: 0;
+  }
+  .template-blog .article .date {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .template-blog .article .author {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  .template-blog .article .rte-content {
+    grid-column: 2;
+    grid-row: 4;
+  }
+}
+
 /*  4.8 - Cart
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .template-cart {
