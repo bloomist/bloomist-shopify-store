@@ -6,12 +6,12 @@
     "breadcrumbs": {
       "home": "Home",
       "collections": "Collections",
-      "product": "product",
-      "products": "products",
-      "account": "account",
-      "register": "register",
-      "addresses": "addresses",
-      "activate_account": "activate_account"
+      "product": "Product",
+      "products": "Products",
+      "account": "Account",
+      "register": "Register",
+      "addresses": "Addresses",
+      "activate_account": "Activate account"
     },
     "pagination": {
       "previous": "Previous",
