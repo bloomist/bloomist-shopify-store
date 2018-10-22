@@ -118,11 +118,20 @@
               "menu-title": "",
               "menu": "footer"
             }
+          },
+          "1540180716283": {
+            "type": "subscribe",
+            "settings": {
+              "newsletter--heading": "<p>Sign up to our mailing list<\/p>",
+              "subscribe--show-newsletter": false,
+              "subscribe--show-social-icons": true
+            }
           }
         },
         "block_order": [
           "footer--about",
-          "footer--menu"
+          "footer--menu",
+          "1540180716283"
         ],
         "settings": {}
       },
