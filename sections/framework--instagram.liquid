@@ -13,7 +13,7 @@
 {% assign footer = section.settings.footer | escape %}
 
 {% assign total_items = rows | times: columns %}
-{% assign item_margin = 2.125 %}
+{% assign item_margin = 2 %}
 {% assign total_margin = item_margin | times: columns_with_margin %}
 {% assign item_width = 100.00 | minus: total_margin | divided_by: columns | append: '%' %}
 

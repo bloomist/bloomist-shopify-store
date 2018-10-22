@@ -33,10 +33,11 @@
 .overlaid_link {
   border-bottom: 1px solid {{ settings.color--alternative }};
   bottom: 15%;
+  display: none;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 1024px) {
   .overlaid_link {
-    display: none;
+    display: block;
   }
 }
 
@@ -48,11 +49,11 @@
 }
 
 .center_horz_vert {
-  top: 50%;
+  top: 48%;
   left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-      -ms-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-48%);
+      -ms-transform: translate(-50%,-48%);
+          transform: translate(-50%,-48%);
 }
 
 .image--collection {
@@ -68,7 +69,7 @@
   text-transform: uppercase;
   margin: 0;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .container--collection-image .collection--title {
     font-size: 3.5rem;
   }  

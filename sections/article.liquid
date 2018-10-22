@@ -23,37 +23,7 @@
 <div class="columns-wrapper row">
 
   <div class="article columns large-12">
-      <h1 class="title"><a href="{{ article.url }}">{{ article.title }}</a></h1>
-      <p class="mobile-meta show--small-medium">
-        {{ 'blog.article.written_by' | t }} {{ article.author }} - {{ article.published_at | date: format: 'month_day_year' }}
-      </p>
-
-      {% if article.image %}
-      <div class="featured-image">
-        {%
-          include "framework--image",
-          image: article.image
-        %}
-      </div>
-      {% endif %}
-
-      <div class="metadata">
-        {% if article.excerpt != blank %}
-        <div class="excerpt">
-          <h2 class="featured-text--heading">{{ article.excerpt }}</h2>
-        </div>
-        {% endif %}
-
-        <div class="date block">
-          <h3 class="title">{{ 'blog.article.date' | t }}</h3>
-          <p class="content">{{ article.published_at | date: format: 'month_day_year' }}</p>
-        </div>
-
-        <div class="author block">
-          <h3 class="title">{{ 'blog.article.written_by' | t }}</h3>
-          <p class="content">{{ article.author }}</p>
-        </div>
-      </div>
+      <h1 class="title">{{ article.title }}</h1>
 
       <div class="content colored-links rte-content">{{ article.content }}</div>
 
