@@ -106,11 +106,13 @@
       <div class="product--title">{{ title }}</div>
     </a>
 
+    {% comment %} Don't want to show vendor at widget level
     {% if show_vendor %}
       <a href="{{ vendor_url }}">
         <div class="product--vendor">{{ vendor }}</div>
       </a>
     {% endif %}
+    {% endcomment %}
 
     <a href="{{ url }}">
       <div class="product--price-wrapper">

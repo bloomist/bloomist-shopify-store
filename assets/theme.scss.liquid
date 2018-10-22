@@ -5753,7 +5753,6 @@ body {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 100%;
-  padding: 2rem 0 3rem;
 }
 
 .product-grid--root[data-centered="true"] {
@@ -5763,19 +5762,15 @@ body {
 }
 
 .product--root {
-  margin: 0 0 2rem 1rem;
+  margin-bottom: 2rem;
 }
 
 @media only screen and (max-width: 767px) {
-  .product-grid--root[data-mobile-items-per-row="1"] > * {
-    width: calc(100%);
-  }
   .product-grid--root[data-mobile-items-per-row="1"] > .product--root {
-    margin-left: 0;
+    width: 100%;
   }
-
-  .product-grid--root[data-mobile-items-per-row="2"] > * {
-    width: 47.24%;
+  .product-grid--root[data-mobile-items-per-row="2"] > .product--root {
+    width: calc(98% / 2);
   }
   .product-grid--root[data-mobile-items-per-row="2"] > .product--root:nth-child(2n+1) {
     margin-left: 0;
@@ -5784,21 +5779,18 @@ body {
 
 @media only screen and (min-width: 768px) {
   .product--root {
+    margin-left: 2%;
     position: relative;
   }
-  .product--root:first-child {
-    margin-left: 0;
-  }
-
   .product-grid--root[data-items-per-row="3"] > * {
-    width: 31.5%;
+    width: calc(96% / 3);
   }
   .product-grid--root[data-items-per-row="3"] > .product--root:nth-child(3n+1) {
     margin-left: 0;
   }
 
   .product-grid--root[data-items-per-row="4"] > * {
-    width: 22.94%;
+    width: calc(94% / 4);
   }
   .product-grid--root[data-items-per-row="4"] > .product--root:nth-child(4n+1) {
     margin-left: 0;
@@ -7950,7 +7942,7 @@ a.featured-grid--call-to-action:hover {
 }
 @media only screen and (min-width: 1024px) {
   .featured-collections--title {
-    font-size: 3.5rem !important;
+    font-size: 2.5rem !important;
   }
 }
 
@@ -8196,7 +8188,7 @@ input.newsletter--email {
 }
 
 .featured-text--container {
-  max-width: 650px;
+  max-width: 75%;
   margin: 0 auto;
   text-align: center;
 }
@@ -8544,6 +8536,10 @@ input.newsletter--email {
 
 .template-collection .main-content .divider.bottom-margin {
   margin-bottom: 1.25rem;
+}
+
+.template-collection .main-content footer {
+  min-height: 3.5rem;
 }
 
 .template-collection .main-content footer .right .pagination {
