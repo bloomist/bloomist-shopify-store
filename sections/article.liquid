@@ -1,6 +1,6 @@
 {% paginate article.comments by 20 %}
 
-<div class="previous-next row">
+<!-- <div class="previous-next row">
   <div class="previous columns large-2 small-6">
     {% if blog.previous_article %}
       {% capture prev_blog_text %}
@@ -18,13 +18,15 @@
       <span class="right">{{ next_blog_text | link_to: blog.next_article }}</span>
     {% endif %}
   </div>
-</div>
+</div> -->
+
 
 <div class="columns-wrapper row">
 
   <div class="article columns large-12">
+    <div class="top-bar"></div>
       <h1 class="title">{{ article.title }}</h1>
-
+		<img class="article-header-img" src="{{ article.image.src | img_url: 'large' }}">
       <div class="content colored-links rte-content">{{ article.content }}</div>
 
        <div class="social-share block clearfix">

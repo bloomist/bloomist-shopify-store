@@ -32,7 +32,7 @@
     "typography--text": "montserrat_n3",
     "hover-image-enabled": true,
     "brand-show": true,
-    "search--show-in-header": true,
+    "search--show-in-header": false,
     "search--show-articles": true,
     "search--show-pages": true,
     "footer-facebook-follow-url": "https:\/\/www.facebook.com\/mybloomist",
@@ -97,28 +97,13 @@
           "announcement--background-color": "accent",
           "announcement--alternative-color": true,
           "header--promo-bar--show-on": "all",
-          "header--promo-bar--text": "Free shipping on orders $30+",
+          "header--promo-bar--text": "Free shipping on orders $50+",
           "header--promo-bar--link": ""
         }
       },
       "footer": {
         "type": "footer",
         "blocks": {
-          "footer--about": {
-            "type": "about",
-            "settings": {
-              "about-title": "",
-              "text": "<p>&copy; Bloomist, Inc.<\/p>",
-              "footer-payment-options-show": false
-            }
-          },
-          "footer--menu": {
-            "type": "menu",
-            "settings": {
-              "menu-title": "",
-              "menu": "footer"
-            }
-          },
           "1540180716283": {
             "type": "subscribe",
             "settings": {
@@ -126,12 +111,43 @@
               "subscribe--show-newsletter": false,
               "subscribe--show-social-icons": true
             }
+          },
+          "1540219711300": {
+            "type": "menu",
+            "settings": {
+              "menu-title": "About Us",
+              "menu": "second-footer-menu"
+            }
+          },
+          "footer--menu": {
+            "type": "menu",
+            "settings": {
+              "menu-title": "Customer Service",
+              "menu": "third-footer-menu"
+            }
+          },
+          "1540219742005": {
+            "type": "menu",
+            "settings": {
+              "menu-title": "",
+              "menu": "footer-4"
+            }
+          },
+          "footer--about": {
+            "type": "about",
+            "settings": {
+              "about-title": "",
+              "text": "<p>&copy; Bloomist, Inc.<\/p>",
+              "footer-payment-options-show": false
+            }
           }
         },
         "block_order": [
-          "footer--about",
+          "1540180716283",
+          "1540219711300",
           "footer--menu",
-          "1540180716283"
+          "1540219742005",
+          "footer--about"
         ],
         "settings": {}
       },
@@ -163,7 +179,7 @@
         "settings": {
           "collections-breadcrumbs-show": true,
           "collections-tags-show": false,
-          "collections-products-per-row": "4",
+          "collections-products-per-row": "3",
           "mobile-items-per-row": "1"
         }
       },
@@ -282,7 +298,7 @@
       "1530233365157": {
         "type": "framework--instagram",
         "settings": {
-          "username": "myobjae",
+          "username": "mybloomist",
           "access-token": "7994606785.c76948d.c95c61e892fa43669569a3f018fe8bd8",
           "background-color": "none",
           "full-width": true,
@@ -299,11 +315,11 @@
           "1536829699724-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/185419.jpg",
-              "slide-title": "Headline to come",
-              "slide-tagline": "Text to come",
-              "slide-link-url": "shopify:\/\/collections",
-              "slide-link-title": "Shop now",
+              "image": "shopify:\/\/shop_images\/Screen_Shot_2018-10-23_at_1.42.46_PM.png",
+              "slide-title": "Introducing Hilary",
+              "slide-tagline": "THE ULTIMATE INTERIORS MULTI-HYPHENATE",
+              "slide-link-url": "https:\/\/bloomist.myshopify.com\/blogs\/journal\/get-to-know-hilary-robertson",
+              "slide-link-title": "Read Now",
               "slide-y-pos": "middle",
               "slide-x-pos": "center",
               "slide-text-pos": "text-center"
@@ -312,10 +328,10 @@
           "1539215721864": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/247030.jpg",
-              "slide-title": "Slideshow",
-              "slide-tagline": "Introduce your store or campaign with this slideshow section.",
-              "slide-link-url": "",
+              "image": "shopify:\/\/shop_images\/Screen_Shot_2018-10-23_at_1.39.19_PM.png",
+              "slide-title": "Our Story",
+              "slide-tagline": "Learn about Bloomist and who we are",
+              "slide-link-url": "shopify:\/\/pages\/our-story",
               "slide-link-title": "Link to content",
               "slide-y-pos": "middle",
               "slide-x-pos": "left",

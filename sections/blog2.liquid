@@ -1,0 +1,94 @@
+{% paginate blog.articles by section.settings.articles-per-page %}
+
+<div class="row blog-title">
+  <div class="columns large-12">
+    <h1 class="text">{{ blog.title }}</h1>
+  </div>
+</div>
+
+<div class="row">
+  <!-- Begin content -->
+  <div class="articles columns large-12">
+    {% if blog.articles.size <= 0 %}
+      <h2>{{ 'blog.article.no_articles' | t }}</h2>
+    {% endif %}
+
+    {% for article in blog.articles %}
+    <div class="article clearfix">
+      <div class="columns large-12">
+        <h1 class="title"><a href="{{ article.url }}">{{ article.title }}</a></h1>
+        <p class="mobile-meta show--small-medium">
+          {% assign published_date = article.published_at | date: format: 'month_day_year' %}
+          {{ 'blog.article.written_by' | t }} {{ article.author }} - {{ published_date }}
+        </p>
+
+        {% if article.image %}
+          <div class="featured-image">
+            <a href="{{ article.url }}" title="{{ blog.title }}">
+              {%
+                include "framework--image",
+                image: article.image
+              %}
+            </a>
+          </div>
+        {% endif %}
+
+        <div class="date block">
+          <h3 class="title">{{ 'blog.article.date' | t }}</h3>
+          <p class="content">{{ article.published_at | date: format: 'month_day_year' }}</p>
+        </div>
+
+        <div class="author block">
+          <h3 class="title">{{ 'blog.article.written_by' | t }}</h3>
+          <p class="content">{{ article.author }}</p>
+        </div>
+
+        <div class="content rte-content colored-links">
+          {{ article.excerpt_or_content }}
+
+          {% if article.excerpt != blank %}
+          <p class="read-more">
+            <a href="{{ article.url }}">
+              {{ 'blog.article.read_more' | t }}
+            </a>
+          </p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+</div>
+<!-- End content -->
+<div class="row">
+  <div class="right columns large-12">
+    {% include 'snippet-pagination' %}
+  </div>
+</div>
+{% endpaginate %}
+
+
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+    {
+      "label": "Articles per page",
+      "id": "articles-per-page",
+      "type": "range",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "default": 10
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
