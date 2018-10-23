@@ -115,14 +115,14 @@
           "1540219711300": {
             "type": "menu",
             "settings": {
-              "menu-title": "About Us",
+              "menu-title": "",
               "menu": "second-footer-menu"
             }
           },
           "footer--menu": {
             "type": "menu",
             "settings": {
-              "menu-title": "Customer Service",
+              "menu-title": "",
               "menu": "third-footer-menu"
             }
           },
