@@ -69,8 +69,8 @@
     "checkout_sidebar_background_color": "#fafafa",
     "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
     "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
-    "checkout_accent_color": "#197bbd",
-    "checkout_button_color": "#197bbd",
+    "checkout_accent_color": "#758448",
+    "checkout_button_color": "#758448",
     "checkout_error_color": "#e32c2b",
     "color-text-alt": "#999999",
     "color-button-bg-hover": "#777777",
@@ -107,8 +107,7 @@
           "1540180716283": {
             "type": "subscribe",
             "settings": {
-              "newsletter--heading": "<p>Sign up to our mailing list<\/p>",
-              "subscribe--show-newsletter": false,
+              "subscribe--show-newsletter": true,
               "subscribe--show-social-icons": true
             }
           },
@@ -116,38 +115,22 @@
             "type": "menu",
             "settings": {
               "menu-title": "",
-              "menu": "second-footer-menu"
-            }
-          },
-          "footer--menu": {
-            "type": "menu",
-            "settings": {
-              "menu-title": "",
-              "menu": "third-footer-menu"
-            }
-          },
-          "1540219742005": {
-            "type": "menu",
-            "settings": {
-              "menu-title": "",
-              "menu": "footer-4"
+              "menu": "footer-nav"
             }
           },
           "footer--about": {
             "type": "about",
             "settings": {
               "about-title": "",
-              "text": "<p>&copy; Bloomist, Inc.<\/p>",
+              "text": "&copy; Bloomist, Inc.",
               "footer-payment-options-show": false
             }
           }
         },
         "block_order": [
-          "1540180716283",
+          "footer--about",
           "1540219711300",
-          "footer--menu",
-          "1540219742005",
-          "footer--about"
+          "1540180716283"
         ],
         "settings": {}
       },

@@ -52,7 +52,7 @@
     </div><!-- .row -->
 
     <div class="bottom-row font--accent">
-      <div class="row {% if section.settings.header-menu-center %} text-center{% endif %}">
+      <div class="row{% if section.settings.header-menu-center %} text-center{% endif %}">
 
       {% if linklists[section.settings.menu].links.size > 0 %}
         {% assign header_nav = section.settings.menu %}

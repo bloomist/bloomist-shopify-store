@@ -36,7 +36,8 @@
 
   @media only screen and (max-width: 767px) {
     [data-section-id="{{ section.id }}"] .instagram--item {
-      width: 48.2%;
+      {% comment %} Must update theme.scss.liquid .instagram--root[data-spacing="true"] .instagram--item for mobile so that .margin-left is [100% - (width defined below * 2)] {% endcomment %}
+      width: 47.5%;
     }
   }
 </style>

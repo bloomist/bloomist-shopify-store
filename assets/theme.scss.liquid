@@ -2454,6 +2454,7 @@ html.modal-open {
 .x-menu--level-2--link a {
   display: inline-block;
   padding: 1rem 2rem;
+  width: 100%;
 }
 
 ul.x-menu--level-3--container {
@@ -3112,13 +3113,15 @@ select {
   }
 }
 
-.column:first-child,
-.columns:first-child {
-  padding-left: 0;
-}
-.column:last-child,
-.columns:last-child {
-  padding-right: 0;
+@media only screen and (min-width: 768px) {
+  .column:first-child,
+  .columns:first-child {
+    padding-left: 0;
+  }
+  .column:last-child,
+  .columns:last-child {
+    padding-right: 0;
+  }  
 }
 
 /* Styles for screens that are atleast 768px; */
@@ -5189,7 +5192,7 @@ body {
   display: none;
   color: {{ settings.color-header }};
   position: absolute;
-  right: 40px;
+  right: 3.25rem;
   width: auto;
 }
 
@@ -5286,7 +5289,7 @@ body {
 }
 
 .main-header .cart .cart-link {
-  line-height: 2rem;
+  line-height: 2;
   color: {{ settings.color-header-cart }};
 }
 
@@ -5586,18 +5589,26 @@ body {
 /*  2.3 - Footer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .main-footer {
-  padding: 0 0 4rem 0;
+  padding: 4rem 0;
   background: {{ settings.color-footer-bg }};
   color: {{ settings.color-footer }};
-  margin-top: 3.25rem;
-}
-
-.main-footer .row.bottom .fw--icon {
-  height: 1.35em;
 }
 
 .main-footer .footer-divider {
   padding: 0 0 0.75rem 0;
+}
+
+.main-footer .columns {
+  padding: 0 0 1.5rem 0;
+}
+@media only screen and (min-width: 1024px) {
+  .main-footer .columns {
+    padding-left: 1.25rem;
+    padding-bottom: 0;
+  }
+  .main-footer .columns:first-child {
+    padding-left: 0;
+  }
 }
 
 .main-footer a, .main-footer a:link {
@@ -5610,13 +5621,8 @@ body {
 
 .main-footer .title {
   font-size: 14px;
-  margin: 2rem 0 0 0;
   height: 16.328125px;
   min-width: 1px;
-}
-
-.main-footer .content {
-  margin: 1.25rem 0 0 0;
 }
 
 .main-footer .widget-heading {
@@ -5633,9 +5639,18 @@ body {
     text-align: left;
   }
 }
+@media only screen and (min-width: 1024px) {
+  .main-footer .about {
+    max-width: 20%;
+  }
+}
 
 .main-footer .about .text {
   margin-top: 0;
+}
+
+.main-footer .about .text p {
+  margin: 0;
 }
 
 .main-footer .menu {
@@ -5645,6 +5660,11 @@ body {
 @media only screen and (min-width: 768px) {
   .main-footer .menu {
     text-align: left;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .main-footer .menu {
+    max-width: 52%;
   }
 }
 
@@ -5663,9 +5683,15 @@ body {
   margin: 0;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
+  .main-footer .menu .footer-nav {
+    columns: 3 3rem;
+  }
   .main-footer .menu .footer-nav li {
     padding: 0;
+  }
+  .main-footer .menu .footer-nav li:nth-child(2), .main-footer .menu .footer-nav li:nth-child(5) {
+    break-after: column;
   }
 }
 
@@ -5677,6 +5703,15 @@ body {
   .main-footer .subscribe {
     text-align: left;
   }
+}
+@media only screen and (min-width: 1024px) {
+  .main-footer .subscribe {
+    max-width: 28%;
+  }
+}
+
+.footer--newsletter--subtitle {
+  margin-bottom: 1rem;
 }
 
 .main-footer .subscribe .contact-form, .main-footer .subscribe .mailchimp-form {
@@ -5692,7 +5727,7 @@ body {
   line-height: 26px;
 }
 
-.main-footer .subscribe .contact-form input[type="submit"], .main-footer .subscribe .mailchimp-form input[type="submit"] {
+.main-footer .subscribe .contact-form .button, .main-footer .subscribe .mailchimp-form input[type="submit"] {
   display: inline-block;
   width: auto;
   padding: 0 1rem;
@@ -5700,8 +5735,8 @@ body {
   line-height: 26px;
 }
 
-.main-footer .subscribe .contact-form .success, .main-footer .subscribe .mailchimp-form .success {
-  font-style: italic;
+.main-footer .subscribe .contact-form .success_message, .main-footer .subscribe .mailchimp-form .success_message {
+  color: {{ settings.color-header--alternative }}
 }
 
 @media only screen and (min-width: 768px) {
@@ -5729,12 +5764,12 @@ body {
   margin: 0;
 }
 
-.main-footer .social-follow a {
+.main-footer .social-follow .fw--icon {
   display: inline-block;
-  margin: 0 1rem 0.75rem 0;
+  margin-right: 0.5rem;
 }
 
-.main-footer .social-follow a:last-child {
+.main-footer .social-follow a:last-child .fw--icon {
   margin-right: 0;
 }
 
@@ -5808,6 +5843,7 @@ body {
 }
 
 .product--image {
+  background: {{ settings.color-grid-sold-out-bg }};
   width: 100%;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
@@ -8353,9 +8389,10 @@ input.newsletter--email {
 
 @media only screen and (max-width: 767px) {
   .instagram--root[data-spacing="true"] .instagram--item {
-    margin: 0 0 1rem 0.75rem;
+    {% comment %} Must update <style> in framework--instagram.liquid so that .instagram--item width is [(100% - margin-left defined below) / 2] {% endcomment %}
+    margin-left: 5%;
   }
-  .instagram--root[data-spacing="true"] .instagram--item:nth-child(3n) {
+  .instagram--root[data-spacing="true"] .instagram--item:nth-child(2n+1) {
     margin-left: 0;
   }
 }

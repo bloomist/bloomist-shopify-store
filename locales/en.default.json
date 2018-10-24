@@ -65,10 +65,10 @@
       "back": "Back"
     },
     "footer": {
-      "newsletter_title": "",
-      "newsletter_subtitle": "Sign up for our mailing list",
-      "newsletter_placeholder": "Your email",
-      "newsletter_button": "OK",
+      "newsletter_title": "Join the adventure",
+      "newsletter_subtitle": "Early access to new styles",
+      "newsletter_placeholder": "Enter your email",
+      "newsletter_button": "Join",
       "newsletter_email_blank": "Email field is blank"
     }
   },
