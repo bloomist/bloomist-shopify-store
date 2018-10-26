@@ -2,7 +2,6 @@
 <div id="customer-activate" class="row">
   <div class="columns large-12">
     <h1 class="page-title">{{ 'customer.activate_account.page_title' | t }}</h1>
-    {% include 'snippet-breadcrumbs' %}
     <p class="note create-password">{{ 'customer.activate_account.subtext' | t }}</p>
 
     {% form 'activate_customer_password' %}
@@ -16,7 +15,7 @@
 
     <div class="action_bottom">
       <input class="button" type="submit" value="{{ 'customer.activate_account.submit' | t }}" />
-      <a style="margin-left: 15px;" href="/">{{ 'customer.activate_account.cancel' | t }}</a>
+      <a href="/">{{ 'customer.activate_account.cancel' | t }}</a>
     </div>
     {% endform %}
   </div> 

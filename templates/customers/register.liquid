@@ -1,9 +1,8 @@
 <div class="account-content">
 <div id="customer-register">
   <div class="row">
-    <div id="register" class="columns large-12">
+    <div id="register" class="columns">
       <h1 class="page-title">{{ 'customer.register.page_title' | t }}</h1>
-      {% include 'snippet-breadcrumbs' %}
 
 	    {% form 'create_customer' %}
 	
@@ -31,7 +30,7 @@
 
 	      <div class="action_bottom">
 	        <input class="button" type="submit" value="{{ 'customer.register.submit' | t }}" />
-	        <span class="note"> <a style="margin-left: 15px;" href="{{ shop.url }}/account/login">{{ 'customer.register.login' | t }}</a></span>
+	        <span class="note"><a href="{{ shop.url }}/account/login">{{ 'customer.register.login' | t }}</a></span>
 	      </div>
 	
 	    {% endform %}

@@ -9,7 +9,7 @@
   {% if shop.customer_accounts_enabled %}
     <div class="mobile-nav--login font--accent">
       {% if customer %}
-        {% assign view_account_link = 'layout.header.account_view_link' | t %}
+        {% assign view_account_link = 'layout.header.account_toggle_link' | t %}
         {% capture view_account_link %}<a href="/account">{{ view_account_link }}</a>{% endcapture %}
         {{ view_account_link }}
       {% else %}

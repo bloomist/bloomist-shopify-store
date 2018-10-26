@@ -4958,7 +4958,12 @@ label {
 }
 
 .main-content {
-  padding-top: 2rem;
+  padding-top: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .main-content {
+    padding-top: 2rem;
+  }
 }
 
 .section--footer {
@@ -8234,9 +8239,13 @@ input.newsletter--email {
 }
 
 .featured-text--heading {
-  font-size: 1.3rem;
-  text-transform: none;
-  margin: 0;
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .featured-text--heading {
+    font-size: 1.3rem;
+  }
 }
 
 .featured-text--body {
@@ -9534,12 +9543,83 @@ html.no-cssgrid .product-page--main-content {
 
 /*  4.9 - Customer Accounts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-.account-content .row {
-  max-width: 57.5em;
-  margin: 0;
+.account-content {
+  .page-title {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .columns {
+    display: grid;
+    grid-template-rows: 3;
+  }
+
+  .errors ul {
+    color: {{ settings.color-error }};
+    list-style: none;
+    margin: 0 0 1rem;
+    padding: 0;
+  }
+
+  .social_front {
+    grid-row: 2;
+    margin-bottom: 2rem;
+
+    .social {
+      h4 {
+        display: none;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          float: none;
+          margin-bottom: 1rem;
+          width: auto !important;
+        }
+      }
+    }
+  }
+  .row form {
+    grid-row: 3;
+  }
+  span.note {
+    display: block;
+    margin-top: 1rem;
+  }
 }
 
-.account-content .row.large {
+@media only screen and (min-width: 768px) {
+  .account-content {
+    .columns {
+      grid-template-columns: 48% 48%;
+      grid-column-gap: 4%;
+    }
+    .page-title {
+      grid-row: 1;
+      grid-column: 1 / span 2;
+    }
+    .social_front {
+      grid-row: 2;
+      grid-column: 1;
+      justify-self: end;
+      margin-top: 1rem;
+      width: 330px;
+    }
+    .row form {
+      grid-row: 2;
+      grid-column: 2;
+    }
+    span.note {
+      display: inline;
+      margin-top: 0;
+      margin-left: 1rem;
+    }
+  }
+}
+.account-content .row.large form {
   max-width: 106.66667em;
 }
 

@@ -3,7 +3,6 @@
     <div class="row large">
       <div class="columns large-12">
         <h1 class="page-title">{{ 'customer.order.page_title' | t: name: order.name }} <span class="note order_date">&mdash; {{ order.created_at | date: format: 'month_day_year' }}</span></h1>
-        {% include 'snippet-breadcrumbs' %}
 
         {% if order.cancelled %}
         <div id="order_cancelled" class="flash notice">

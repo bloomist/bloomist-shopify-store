@@ -288,7 +288,7 @@
       "email": "Email",
       "password": "Password",
       "forgot_password": "Forgot your password?",
-      "new_account": "Register a New Account",
+      "new_account": "Create a new account",
       "reset_password": "Reset Password",
       "reset_instructions": "We will send you an email to reset your password.",
       "submit": "Submit",
@@ -331,8 +331,8 @@
       "last_name": "Last Name",
       "email": "Email",
       "password": "Password",
-      "submit": "Create",
-      "login": "Log in to an Existing Account"
+      "submit": "Sign up",
+      "login": "Log in instead"
     },
     "reset_password": {
       "page_title": "Reset Password",

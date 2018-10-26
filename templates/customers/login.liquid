@@ -1,9 +1,8 @@
 <div class="account-content">
 <div id="customer-login">
   <div class="row">
-    <div id="login" class="columns large-7">
+    <div id="login" class="columns">
       <h1 class="page-title">{{ 'customer.login.page_title' | t }}</h1>
-      {% include 'snippet-breadcrumbs' %}
 
       {% form 'customer_login' %}
       {{ form.errors | default_errors }}
@@ -19,14 +18,13 @@
 
       <div class="action_bottom">
         <input class="button" type="submit" value="{{ 'customer.login.sign_in' | t }}" />
-        <span class="note"> <a style="margin-left: 15px;" href="{{ shop.url }}/account/register">{{ 'customer.login.new_account' | t }}</a></span>
+        <span class="note"><a href="{{ shop.url }}/account/register">{{ 'customer.login.new_account' | t }}</a></span>
       </div>
       {% endform %}
     </div>
     
     <div id="recover-password" style="display:none;" class="columns large-7">
       <h1 class="page-title">{{ 'customer.login.reset_password' | t }}</h1>
-      {% include 'snippet-breadcrumbs' %}
       <p class="note">{{ 'customer.login.reset_instructions' | t }}</p>
 
       {% form 'recover_customer_password' %}
@@ -36,7 +34,7 @@
       <input type="email" value="" size="30" name="email" id="recover-email" class="text" />
 
       <input class="button" type="submit" value="{{ 'customer.login.submit' | t }}" />
-      <span class="note"> <a style="margin-left: 15px;" href="#" onclick="hideRecoverPasswordForm();return false;">{{ 'customer.login.cancel' | t }}</a></span>
+      <span class="note"><a href="#" onclick="hideRecoverPasswordForm();return false;">{{ 'customer.login.cancel' | t }}</a></span>
       {% endform %}
     </div>
     
@@ -61,7 +59,7 @@
 
   function hideRecoverPasswordForm() {
     document.getElementById('recover-password').style.display = 'none';
-    document.getElementById('login').style.display = 'block';
+    document.getElementById('login').style.display = 'grid';
   }
 
   if (window.location.hash == '#recover') { showRecoverPasswordForm() }
