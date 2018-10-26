@@ -104,11 +104,12 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "1540180716283": {
-            "type": "subscribe",
+          "footer--about": {
+            "type": "about",
             "settings": {
-              "subscribe--show-newsletter": true,
-              "subscribe--show-social-icons": true
+              "about-title": "",
+              "text": "&copy; Bloomist, Inc.",
+              "footer-payment-options-show": false
             }
           },
           "1540219711300": {
@@ -118,12 +119,11 @@
               "menu": "footer-nav"
             }
           },
-          "footer--about": {
-            "type": "about",
+          "1540180716283": {
+            "type": "subscribe",
             "settings": {
-              "about-title": "",
-              "text": "&copy; Bloomist, Inc.",
-              "footer-payment-options-show": false
+              "subscribe--show-newsletter": true,
+              "subscribe--show-social-icons": true
             }
           }
         },
@@ -162,7 +162,7 @@
         "settings": {
           "collections-breadcrumbs-show": true,
           "collections-tags-show": false,
-          "collections-products-per-row": "3",
+          "collections-products-per-row": "4",
           "mobile-items-per-row": "1"
         }
       },
@@ -345,7 +345,7 @@
           "1536830033524-1": {
             "type": "collection",
             "settings": {
-              "collection": "vases",
+              "collection": "vessels",
               "collection-link-title": "Shop the collection"
             }
           }
@@ -381,6 +381,28 @@
           "background-color": "none",
           "heading": "Our newsletter",
           "newsletter--subheading": "<p>Join our community of greenery fans, nature lovers, and design buffs; and get 20% off your next order<\/p>"
+        }
+      },
+      "featured-collection": {
+        "type": "featured-collection",
+        "settings": {
+          "background-color": "none",
+          "home-product-slider-collection": "tk-title-hilary-product-1",
+          "max_products": 8
+        }
+      },
+      "framework--instagram": {
+        "type": "framework--instagram",
+        "settings": {
+          "username": "mybloomist",
+          "access-token": "7994606785.c76948d.c95c61e892fa43669569a3f018fe8bd8",
+          "background-color": "light",
+          "full-width": false,
+          "spacing": true,
+          "rows": 2,
+          "columns": 5,
+          "heading": "Instagram",
+          "footer": "Follow @shopify on Instagram"
         }
       }
     },
@@ -468,7 +490,6 @@
             "footer--subscribe": {
               "type": "subscribe",
               "settings": {
-                "newsletter--heading": "<p>Sign up to our mailing list<\/p>",
                 "subscribe--show-newsletter": true,
                 "subscribe--show-social-icons": true
               }
@@ -866,7 +887,6 @@
             "footer--subscribe": {
               "type": "subscribe",
               "settings": {
-                "newsletter--heading": "<p>Sign up to our mailing list<\/p>",
                 "subscribe--show-newsletter": true,
                 "subscribe--show-social-icons": true
               }
@@ -1269,7 +1289,6 @@
             "footer--subscribe": {
               "type": "subscribe",
               "settings": {
-                "newsletter--heading": "<p>Sign up to our mailing list<\/p>",
                 "subscribe--show-newsletter": true,
                 "subscribe--show-social-icons": true
               }
@@ -1667,7 +1686,6 @@
             "footer--subscribe": {
               "type": "subscribe",
               "settings": {
-                "newsletter--heading": "<p>Sign up to our mailing list<\/p>",
                 "subscribe--show-newsletter": true,
                 "subscribe--show-social-icons": true
               }
