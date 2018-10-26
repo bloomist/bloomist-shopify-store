@@ -7,7 +7,6 @@
     <div class="slides">
 
       {% for block in section.blocks %}
-
         {%- assign slide_is_video = false -%}
         {% if block.type == 'video' %}
           {%- assign slide_is_video = true -%}
@@ -21,6 +20,12 @@
         {%- assign slide_is_link = false -%}
         {% if block.settings.slide-link-url.size > 0 and block.settings.slide-link-title == blank %}
           {%- assign slide_is_link = true -%}
+        {% endif %}
+
+        {% if block.settings.slide-text-color == 'light' %}
+          {% assign slide-text-color = settings.color--alternative %}
+        {% elsif block.settings.slide-text-color == 'dark' %}
+          {% assign slide-text-color = settings.color-text %}
         {% endif %}
 
         <div class="overlaid_container slide{% if block.settings.slide-video.size > 0 %} video{% endif %}"
@@ -42,18 +47,12 @@
               %}
             {% endif %}
           {% else %}
-            {% unless block.settings.slide-link-url == "" %}
-            <a href="{{ block.settings.slide-link-url }}">
-            {% endunless %}
-              {%
-                include 'framework--image',
-                image: block.settings.image,
-                link: widget_image_link,
-                full_width: true
-              %}
-            {% unless block.settings.slide-link-url == "" %}
-            </a>
-            {% endunless %}
+            {%
+              include 'framework--image',
+              image: block.settings.image,
+              link: widget_image_link,
+              full_width: true
+            %}
           {% endif %}
 
           {% if block.settings.slide-video.size > 0 %}
@@ -75,17 +74,22 @@
                 <div class="bg"></div>
                 <div class="overlaid_text center_horz_vert">
               {% if block.settings.slide-title.size > 0 %}
-                  <h2 class="title">{{ block.settings.slide-title | escape }}</h2>
+                  <h2 class="title">
+                    {% if block.settings.slide-link-url != blank %}<a href="{{ block.settings.slide-link-url }}" style="color: {{ slide-text-color }}">{% endif %}{{ block.settings.slide-title | escape }}{% if block.settings.slide-link-url != blank %}</a>{% endif %}
+                  </h2>
               {% endif %}
 
               {% if block.settings.slide-tagline.size > 0 %}
-                <h3 class="sub-title">{{ block.settings.slide-tagline | escape }}</h3>
+                <h3 class="sub-title">
+                  {% if block.settings.slide-link-url != blank %}<a href="{{ block.settings.slide-link-url }}" style="color: {{ slide-text-color }}">{% endif %}{{ block.settings.slide-tagline | escape }}
+                  {% if block.settings.slide-link-url != blank %}</a>{% endif %}
+                </h3>
               {% endif %}
                 </div>
 
               {% if block.settings.slide-link-title.size > 0 %}
-                <h4 class="slideshow--button overlaid_link center_horz">
-                  {{ block.settings.slide-link-title | escape }}
+                <h4 class="slideshow--button overlaid_link center_horz" style="border-bottom: 1px solid {{ slide-text-color }}">
+                  {% if block.settings.slide-link-url != blank %}<a href="{{ block.settings.slide-link-url }}" style="color: {{ slide-text-color }}">{% endif %}{{ block.settings.slide-link-title | escape }}{% if block.settings.slide-link-url != blank %}</a>{% endif %}
                 </h4>
               {% endif %}
             </div><!--.slide_caption -->
@@ -202,6 +206,16 @@
           "id": "slide-tagline",
           "label": "Subheading",
           "default": "Introduce your store or campaign with this slideshow section."
+        },
+        {
+          "id": "slide-text-color",
+          "label": "Color",
+          "type": "select",
+          "options": [
+            { "label": "Light", "value": "light" },
+            { "label": "Dark", "value": "dark" }
+          ],
+          "default": "light"
         },
         {
           "type": "url",
