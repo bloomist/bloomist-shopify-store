@@ -124,6 +124,7 @@
   },
   "collections": {
     "page_title": "Collections",
+    "description_link_to_all": "See all our makers",
     "no_collections_feedback": "There are no collections in your store besides your Frontpage collection.",
     "no_collections_link": "Create a collection",
     "tags_title": "Sort by Tags |",
