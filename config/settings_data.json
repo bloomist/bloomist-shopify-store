@@ -122,7 +122,7 @@
           "1540180716283": {
             "type": "subscribe",
             "settings": {
-              "subscribe--show-newsletter": true,
+              "subscribe--show-newsletter": false,
               "subscribe--show-social-icons": true
             }
           }
@@ -162,7 +162,7 @@
         "settings": {
           "collections-breadcrumbs-show": true,
           "collections-tags-show": false,
-          "collections-products-per-row": "4",
+          "collections-products-per-row": "3",
           "mobile-items-per-row": "1"
         }
       },
@@ -286,10 +286,10 @@
           "background-color": "none",
           "full-width": true,
           "spacing": true,
-          "rows": 2,
+          "rows": 1,
           "columns": 5,
           "heading": "Be inspired",
-          "footer": "Follow @mybloomist on Instagram"
+          "footer": ""
         }
       },
       "1536829699724": {
@@ -301,6 +301,7 @@
               "image": "shopify:\/\/shop_images\/Screen_Shot_2018-10-23_at_1.42.46_PM.png",
               "slide-title": "Introducing Hilary",
               "slide-tagline": "THE ULTIMATE INTERIORS MULTI-HYPHENATE",
+              "slide-text-color": "light",
               "slide-link-url": "https:\/\/bloomist.myshopify.com\/blogs\/journal\/get-to-know-hilary-robertson",
               "slide-link-title": "Read Now",
               "slide-y-pos": "middle",
@@ -314,6 +315,7 @@
               "image": "shopify:\/\/shop_images\/Screen_Shot_2018-10-23_at_1.39.19_PM.png",
               "slide-title": "Our Story",
               "slide-tagline": "Learn about Bloomist and who we are",
+              "slide-text-color": "light",
               "slide-link-url": "shopify:\/\/pages\/our-story",
               "slide-link-title": "Link to content",
               "slide-y-pos": "middle",
@@ -334,6 +336,7 @@
       },
       "1536830033524": {
         "type": "framework--featured-collections",
+        "disabled": true,
         "blocks": {
           "1536830033524-0": {
             "type": "collection",
@@ -396,19 +399,72 @@
         "settings": {
           "username": "mybloomist",
           "access-token": "7994606785.c76948d.c95c61e892fa43669569a3f018fe8bd8",
-          "background-color": "light",
+          "background-color": "none",
           "full-width": false,
           "spacing": true,
-          "rows": 2,
+          "rows": 1,
           "columns": 5,
-          "heading": "Instagram",
-          "footer": "Follow @shopify on Instagram"
+          "heading": "BE INSPIRED",
+          "footer": ""
         }
+      },
+      "1540751284230": {
+        "type": "framework--featured-grid",
+        "blocks": {
+          "1540751284230-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/HR_HP_2nd.png",
+              "title": "HILARY ROBERTSON INTERVIEW",
+              "subtitle": "READ MORE",
+              "link-url": "shopify:\/\/blogs\/journal\/hilary-robertson-copy-head-line-to-come-here"
+            }
+          },
+          "1540751284230-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/CH_HP_2nd.png",
+              "title": "CORIE HUMBLE MOBILES",
+              "subtitle": "READ MORE",
+              "link-url": "shopify:\/\/collections\/corie-humble"
+            }
+          }
+        },
+        "block_order": [
+          "1540751284230-0",
+          "1540751284230-1"
+        ],
+        "settings": {
+          "background-color": "none",
+          "full-width": true,
+          "spacing": true,
+          "alternative-color": false,
+          "text-position": "center",
+          "width": 2,
+          "mobile-width": "2",
+          "title": "",
+          "subtitle": "",
+          "link-url": "",
+          "link-text": ""
+        }
+      },
+      "feature-product-collection": {
+        "type": "feature-product-collection",
+        "settings": {
+          "background-color": "none",
+          "home-product-slider-collection": "tk-title-hilary-product-1",
+          "max_products": 16
+        }
+      },
+      "product-view-history": {
+        "type": "product-view-history",
+        "settings": {}
       }
     },
     "content_for_index": [
       "1536829699724",
       "1521155965634",
+      "1540751284230",
       "1536830033524",
       "1521155885984",
       "1519177136360",

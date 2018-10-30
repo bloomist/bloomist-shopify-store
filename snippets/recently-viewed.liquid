@@ -1,0 +1,37 @@
+<script>
+  // variables to pass to theme.js
+  var product_title = '{{ product.title | escape }}';
+  var product_variant_size = {{ product.variants.size }};
+  var product_options_size = {{ product.options.size }};
+  var product_options_size = 10;
+  var product_options_first = '{{ product.options.first | escape }}';
+  var product_json = {{ product | json }};
+  var product_language_was = '{{ 'products.was' | t | escape }}';
+
+  var selectCallback = function(variant, selector) {
+    theme.partials.ProductPage.variantSelected(variant, selector);
+    // add your selectCallback code here...
+  };
+
+  theme.products = {
+    size_chart: {
+      label: '{{ "products.size_chart" | t }}'
+    },
+    low_in_stock: {
+      one: '{{ "products.low_in_stock" | t: count: 1 }}',
+      other: '{{ "products.low_in_stock" | t: count: 2 }}'
+    }
+  };
+
+  jQuery(function($) {
+    function setOptionSelectors() {
+      new Shopify.OptionSelectors("variant-listbox", {
+        product: {{ product | json }},
+        onVariantSelected: selectCallback,
+        enableHistoryState: true
+      });
+    }
+
+    setOptionSelectors();
+  });
+</script>

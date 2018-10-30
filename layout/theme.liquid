@@ -80,7 +80,7 @@
     {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
     {{ 'customer_area.js'  | shopify_asset_url | script_tag }}
   {% endif %}
-
+  
   <script>
     var general_external_links_enabled = true,
     general_scroll_to_active_item = true,
@@ -192,5 +192,32 @@
 
   {% include 'framework--search', view: 'modal' %}
   <script type="text/javascript">(function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/uWVZJaYKfbdMhDA6RjsHyZ6nq6BqgKCHKwW7s1YO/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();</script>
+  <script type="text/javascript">
+    var text = $('.text-overflow').text();
+    console.log(text.length);
+    if( text.length > 216){
+    }else {
+      jQuery(".btn-overflow").addClass("hide-btn");
+    }
+    
+    
+    jQuery(".read-more-link").on("click", function(){
+  		console.log("working");
+      jQuery(".makers-page-info span").toggleClass("auto-height");
+    });
+  </script>
+  <script type="text/javascript">
+    var text = $('.text-overflow-c').text();
+    console.log(text.length);
+    if( text.length > 216){
+    }else {
+      jQuery(".collection-btn").addClass("hide-btn");
+    }
+    
+    
+    jQuery(".collection-btn").on("click", function(){
+      jQuery(".makers-page-info-c span").toggleClass("auto-height");
+    });
+  </script>
 </body>
 </html>

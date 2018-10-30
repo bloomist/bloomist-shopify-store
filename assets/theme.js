@@ -2169,6 +2169,7 @@ function(e,t){"object"==typeof exports?module.exports=t():"function"==typeof def
         singleItem: true,
         navigation: _this.navigation,
         navigationText: false,
+        nav: true,
         pagination: _this.container.data('pagination') ? true : false,
         paginationNumbers: _this.pagination_numbers,
         scrollPerPageNav: true,
