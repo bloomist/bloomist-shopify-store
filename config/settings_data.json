@@ -455,10 +455,6 @@
           "home-product-slider-collection": "tk-title-hilary-product-1",
           "max_products": 16
         }
-      },
-      "product-view-history": {
-        "type": "product-view-history",
-        "settings": {}
       }
     },
     "content_for_index": [

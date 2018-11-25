@@ -1,5 +1,5 @@
 {% assign products_per_row = section.settings.collections-products-per-row | to_number %}
-{% assign products_per_page =  products_per_row | to_number | times: 3 %}
+{% assign products_per_page =  products_per_row | to_number | times: 10 %}
 
 {% paginate collection.products by products_per_page %}
 
@@ -39,42 +39,19 @@
     </div>
   </header>
 
-  {% if collection.image %}
-    {% capture image %}
-      {%
-        include "framework--image",
-        image: collection.image
-      %}
-    {% endcapture %}
-  {% endif %}
+  <div class="row">
+    <div class="columns">
+      <div class="divider"></div>
+    </div>
+  </div>
 
   <div class="row">
-    {% if collection.image %}
-      <div class="container--collection-image overlaid_container">
-    {% endif %}
-      {% if collection.image %}
-        <div class="image--collection">{{ image }}</div>
-      {% endif %}
-      {% unless collection.title == '' %}
-        <h3 class="collection--title{% if collection.image %} overlaid_text center_horz_vert{% endif %}">
-          {{ collection.title }}
-        </h3>
-      {% endunless %}
-    {% if collection.image %}
-      </div>
+    {% if collection.description.size > 0 %}
+    <article class="description columns">
+      {{ collection.description }}
+    </article>
     {% endif %}
 
-    {% if collection.description.size > 0 %}
-      <div class="root featured-text--root">
-        <div class="featured-text--container">
-          <div class="featured-text--header">
-            <p>{{ collection.description }}</p>
-            <h6><a href="/pages/makers" rel="nofollow">{{ 'collections.description_link_to_all' | t }}</a></h6>
-          </div>
-        </div>
-      </div>
-    {% endif %}
-    
     {% if shop.products_count == 0 %}
 
       {% include 'snippet-default-products' %}
@@ -97,13 +74,18 @@
     {% endif %}
   </div>
 
+  <div class="row">
+    <div class="columns">
+      <div class="divider bottom-margin"></div>
+    </div>
+  </div>
+
+
   <footer class="row">
     <div class="left columns large-6">
-      {% comment %} Bottom breadcrumbs
       {% if section.settings.collections-breadcrumbs-show %}
         {% include 'snippet-breadcrumbs' %}
       {% endif %}
-      {% endcomment %}
     </div>
     <div class="right columns large-6">
       {% include 'snippet-pagination' %}
